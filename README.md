@@ -36,3 +36,9 @@ The End Goal of Development is for Cock and Ball Touhouture (Project CBT) and Ch
 # Build
 
 We will be using Packwiz instead of using a python file.
+
+# egg
+
+https://teamopenindustry.cc/maven/cam72cam/immersiverailroading/ImmersiveRailroading/1.12.2-forge-1.9.1-a16da23/ImmersiveRailroading-1.12.2-forge-1.9.1-a16da23.jar
+https://teamopenindustry.cc/maven/cam72cam/universalmodcore/UniversalModCore/1.12.2-forge-1.1.4-4af046d/UniversalModCore-1.12.2-forge-1.1.4-4af046d.jar
+https://www.curseforge.com/minecraft/mc-mods/serializationisbad/files/4672511
