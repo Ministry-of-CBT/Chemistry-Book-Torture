@@ -24,4 +24,9 @@ Add Nightly Invasions
 Add Bloodmoon mod to the game
 ```
 
+# Leaks
+
+![image](https://github.com/Ministry-of-CBT/Chemistry-Book-Torture/assets/141803157/ce975ce2-b475-4e5c-9422-12ef60e7dbfb)
+
+
 The End Goal of Development is for Cock and Ball Touhouture (Project CBT) and Chemistry Book Torture (Supersymmetry Nightmare Edition) to be merged.
