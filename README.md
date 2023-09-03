@@ -30,3 +30,7 @@ Add Bloodmoon mod to the game
 
 
 The End Goal of Development is for Cock and Ball Touhouture (Project CBT) and Chemistry Book Torture (Supersymmetry Nightmare Edition) to be merged.
+
+# Build
+
+We will be using Packwiz instead of using a python file.
