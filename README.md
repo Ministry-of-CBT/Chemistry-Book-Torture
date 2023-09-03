@@ -23,3 +23,5 @@ Add the ability for mobs to destroy and nuke your base
 Add Nightly Invasions
 Add Bloodmoon mod to the game
 ```
+
+The End Goal of Development is for Cock and Ball Touhouture (Project CBT) and Chemistry Book Torture (Supersymmetry Nightmare Edition) to be merged.
