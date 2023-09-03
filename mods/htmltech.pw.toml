@@ -1,0 +1,13 @@
+name = "htmlTech"
+filename = "htmltech-1.12.2-0.2.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "fe08589164d3fa8d48c8b4ebd8680c13c243e87d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4484835
+project-id = 559781

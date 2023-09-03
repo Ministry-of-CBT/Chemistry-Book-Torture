@@ -1,0 +1,13 @@
+name = "A Little Extra Tiles(Formerly LTPhoto)"
+filename = "A_Little_Extra_Tiles-1.0.23.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "388de2035f6de423d724ad04a94160dd635055b6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3541276
+project-id = 326330

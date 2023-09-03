@@ -1,0 +1,13 @@
+name = "File Director"
+filename = "mod-director-launchwrapper-1.7.0-SNAPSHOT-all.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "648ff1a1a6d9cd0ad7c1bfd0208acad26687dce7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4445251
+project-id = 650242

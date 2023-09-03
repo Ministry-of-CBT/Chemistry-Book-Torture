@@ -1,0 +1,13 @@
+name = "Just Enough Dimensions"
+filename = "justenoughdimensions-1.12.2-1.6.0-dev.20200416.184714.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d6429393638bdefef542f20d1164b489089641b5"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2932048
+project-id = 254317

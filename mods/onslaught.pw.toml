@@ -1,0 +1,13 @@
+name = "Onslaught [outdated/momentarily discontinued]"
+filename = "onslaught-1.12.2-1.3.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2073cbd95323d1843b3260edff64101f6f67eea2"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3873356
+project-id = 433235

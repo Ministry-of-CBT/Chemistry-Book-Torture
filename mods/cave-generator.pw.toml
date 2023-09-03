@@ -1,0 +1,13 @@
+name = "Cave Generator"
+filename = "CaveGenerator-1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e465fdab4cebc578b37e4b80e654ebf324ba13ca"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 3367186
+project-id = 298582

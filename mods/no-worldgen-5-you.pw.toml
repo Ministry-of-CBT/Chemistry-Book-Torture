@@ -1,0 +1,13 @@
+name = "No Worldgen 5 You"
+filename = "NoWorldgen5You-1.12.2-1.0.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bab0b07515bc6a50042e051e65f24ea34a9e87fd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 2483769
+project-id = 274782
