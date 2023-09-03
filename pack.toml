@@ -1,0 +1,13 @@
+name = "Chemistry Book Torture"
+author = "Ministry Of CBT"
+version = "indev"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "b019338bcae192a91dbbf95ee355a6cfeee45a0572445c4f3a9156cb14bf590f"
+
+[versions]
+forge = "14.23.5.2860"
+minecraft = "1.12.2"

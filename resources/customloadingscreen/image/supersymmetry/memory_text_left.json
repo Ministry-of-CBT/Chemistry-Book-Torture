@@ -2,7 +2,7 @@
     "parent": "builtin/text",
     "position_type": "TOP_LEFT",
     "offset_pos": "TOP_LEFT",
-    "text": "' Memory Usage: ' + memory_used() + 'MB / ' + memory_max() + 'MB'",
+    "text": "' Your worst nightmare: ' + memory_used() + 'MB / ' + memory_max() + 'MB'",
     "position": {
         "x": "0",
         "y": "10",

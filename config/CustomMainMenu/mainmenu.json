@@ -89,7 +89,7 @@
 		},
 		"quit": {
 			"text": "menu.quit",
-			"hoverText": "You can never escape Greg.",
+			"hoverText": "Go ahead and play project cbt instead.",
 			"alignment": "center",
 			"posX": -150,
 			"posY": 55,
