@@ -4,7 +4,7 @@ This is a fork of supersymmetry that aims to maximize torture of your balls.
 
 This project is sponsored by the shadow government
 
-Chemistry Book Torture will not have anime. If you want anime go to Project CBT instead.
+Chemistry Book Torture will not have anime. If you want anime go to Cock and Ball Touhouture instead.
 
 If you want to complain then explode you acidic son of mekanism
 
