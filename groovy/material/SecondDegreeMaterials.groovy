@@ -450,23 +450,20 @@ public class SecondDegreeMaterials {
                 .color(0x70cc6e)
                 .build();
 
-        //FREE IDs: 13072
-
-        PotassiumPersulfateSolution = new Material.Builder(13073, SuSyUtility.susyId('potassium_persulfate_solution'))
-                .fluid()
-                .components(PotassiumPersulfate * 1, Water * 1)
+        SupportedNickel = new Material.Builder(13072, SuSyUtility.susyId('supported_nickel'))
+                .dust()
+                .components(NickelIINitrate * 1, Alumina * 1)
                 .colorAverage()
-                .build();
+                .flags(GENERATE_CATALYST_BED)
+                .build()
 
-        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+        AmmoniumMetatungstateSolution = new Material.Builder(13073, SuSyUtility.susyId('ammonium_metatungstate_solution'))
+                .liquid()
+                .components(AmmoniumMetatungstate, Ammonia * 4, Water * 4)
+                .color(0x340959)
+                .build()
 
-        PotassiumOsmateSolution = new Material.Builder(13074, SuSyUtility.susyId('potassium_osmate_solution'))
-                .fluid()
-                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
-                .color(0xbf21a0)
-                .build();
-
-        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
+        //FREE IDs: 13074
 
         DilutedAmmoniumSulfateSolution = new Material.Builder(13075, SuSyUtility.susyId('diluted_ammonium_sulfate_solution'))
                 .liquid()
@@ -575,6 +572,7 @@ public class SecondDegreeMaterials {
         SupportedPlatinum = new Material.Builder(13092, SuSyUtility.susyId('supported_platinum'))
                 .dust()
                 .components(Alumina * 1, Platinum * 1, Chlorine * 4)
+                .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
 
@@ -594,7 +592,7 @@ public class SecondDegreeMaterials {
 
         DilutedZincChlorideSolution = new Material.Builder(13095, SuSyUtility.susyId("diluted_zinc_chloride_solution"))
                 .liquid()
-                .components(ZincChloride * 1, Water * 2)
+                .components(ZincChloride * 1, Water * 3)
                 .colorAverage()
                 .build();
 
@@ -715,13 +713,22 @@ public class SecondDegreeMaterials {
                 .components(Iron * 8, Zinc * 1)
                 .colorAverage()
                 .build();
-
-        TetraamminepalladiumDichloride = new Material.Builder(13115, SuSyUtility.susyId("tetraamminepalladium_dichloride"))
+        
+        PotassiumPersulfateSolution = new Material.Builder(13115, SuSyUtility.susyId('potassium_persulfate_solution'))
                 .fluid()
-                .components(Chlorine * 2, Hydrogen * 12, Nitrogen * 4, Palladium * 1)
+                .components(PotassiumPersulfate * 1, Water * 1)
                 .colorAverage()
                 .build();
 
-        TetraamminepalladiumDichloride.setFormula("[Pd(NH3)4]Cl2", true)
+        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+
+        PotassiumOsmateSolution = new Material.Builder(13116, SuSyUtility.susyId('potassium_osmate_solution'))
+                .fluid()
+                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
+                .color(0xbf21a0)
+                .build();
+
+        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
+
     }
 }
