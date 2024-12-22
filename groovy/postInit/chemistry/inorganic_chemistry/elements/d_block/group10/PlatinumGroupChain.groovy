@@ -21,6 +21,7 @@ SIFTER = recipemap('sifter')
 DRYER = recipemap('dryer')
 VACUUM_DT = recipemap('vacuum_distillation')
 BCR = recipemap('bubble_column_reactor')
+SIEVE_DT = recipemap('sieve_distillation')
 
 //LOW YIELD CHAIN FROM SECONDARY ORES
 MACERATOR.recipeBuilder()
@@ -173,7 +174,7 @@ CLARIFIER.recipeBuilder()
 //copper – nickel matte. Oxygen is then blown into the converter
 //to oxidize the iron sulfide selectively to iron oxide, 
 //which forms a slag.
-        EBF.recipeBuilder()
+EBF.recipeBuilder()
         .inputs(ore('dustFlotatedPentlandite') * 8)
         .outputs(metaitem('dustGreenMatte') * 8)
         .duration(20)
@@ -438,24 +439,24 @@ CENTRIFUGE.recipeBuilder()
 //Hydrochloric Acid solution
 //Output: Solution Pt,Rh,Ir,Au,Ag,Ru
 MIXER.recipeBuilder()
-        .fluidInputs(fluid('chlorine'))
+        .fluidInputs(fluid('chlorine') * 1000)
         .inputs(ore('dustPgmConcentrate'))
-        .fluidOutputs(fluid('chlorinated_pgm_concentrate'))
+        .fluidOutputs(fluid('chlorinated_pgm_concentrate') * 1000)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        .fluidInputs(fluid('hydrochloric_acid'))
-        .fluidInputs(fluid('chlorinated_pgm_concentrate'))
-        .fluidOutputs(fluid('pgm_solution'))
+        .fluidInputs(fluid('hydrochloric_acid') * 1000)
+        .fluidInputs(fluid('chlorinated_pgm_concentrate') * 1000)
+        .fluidOutputs(fluid('pgm_solution') * 1000)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 //OSMIUM
 
-//a. contacting the mixture with an oxidizing solution (K2S2O8) to form a volatile OsO4 vapor; 
+//a. contacting the mixture with an oxidizing solution (NaClO3) to form a volatile RuO4/OsO4 vapor; 
 //In acidic media, osmium is oxidized by peroxodisulfate to form OsO4
 //b. bubbling the OsO4 vapor through a KOH trapping solution to form an amount of K2[OsO4(OH)2] 
 //dissolved in the KOH trapping solution;
@@ -463,19 +464,71 @@ MIXER.recipeBuilder()
 //d. separating the Os precipitate from the KOH trapping solution
 //adsorb oso4 distillate into koh solution (buble column)
 //precipitate with ethanol
+
+// 2% ruthenium and 1% osmium
 CSTR.recipeBuilder()
-        .fluidInputs(fluid('pgm_solution'))
-        .fluidInputs(fluid('potassium_persulfate_solution'))
-        .fluidOutputs(fluid('persulfate_treated_pgm_solution'))
+        .fluidInputs(fluid('pgm_solution') * 100)
+        .fluidInputs(fluid('sodium_chlorate_solution') * 3)
+        .fluidOutputs(fluid('chlorate_treated_pgm_solution') * 100)
         .duration(20)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('persulfate_treated_pgm_solution'))
-        .fluidOutputs(fluid('osmium_tetroxide'))
-        .fluidOutputs(fluid('osmium_free_pgm_solution'))
+        .fluidInputs(fluid('chlorate_treated_pgm_solution') * 1000)
+        .fluidOutputs(fluid('os_ru_tetroxide_mixture') * 30)
+        .fluidOutputs(fluid('os_ru_free_pgm_solution') * 970)
         .duration(20)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+// OsO4 + 2RuO4 + 32HCl(H2O) -> H2OsCl6 + 2H3RuCl6 + 42H2O + 7Cl2
+// All of the fun byproducts are pretended to just stay in the Ru solution
+// Also technically we should have hexachlororuthenic(III, IV) acid, but that's too complicated
+BCR.recipeBuilder()
+        .fluidInputs(fluid('os_ru_tetroxide_mixture') * 30)
+        .fluidInputs(fluid('hydrochloric_acid') * 320)
+        .fluidOutputs(fluid('os_ru_solution') * 450)
+        .fluidOutputs(fluid('chlorine') * 70)
+        .duration(60)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+// Distill out with hydrogen peroxide
+// Base: H2OsCl6 + 5H2O2 -> OsO4 + 3Cl2 + 6H2O
+// H2OsCl6 + 2H3RuCl6 + 42H2O + 5H2O2 -> OsO4 + 2H3RuCl6 + 48H2O + 3Cl2
+SIEVE_DT.recipeBuilder()
+        .fluidInputs(fluid('os_ru_solution') * 450)
+        .fluidInputs(fluid('hydrogen_peroxide_solution') * 50)
+        .fluidOutputs(fluid('hydrogen_hexachlororuthenate_solution') * 500)
+        .fluidOutputs(fluid('osmium_tetroxide') * 10)
+        .fluidOutputs(fluid('chlorine') * 30)
+        .duration(60)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+SIEVE_DT.recipeBuilder()
+        .fluidInputs(fluid('hydrogen_hexachlororuthenate_solution') * 500)
+        .fluidInputs(fluid('ammonia') * 30)
+        .fluidOutputs(fluid('ammonium_hexachlororuthenate_solution') * 500)
+        .duration(60)
+        .EUt(Globals.voltAmps[1])
+        .buildAndRegister()
+
+ROASTER.recipeBuilder()
+        .fluidInputs(fluid('ammonium_hexachlororuthenate_solution') * 5000)
+        .fluidInputs(fluid('hydrogen') * 2000)
+        .outputs(metaitem('sponge.ruthenium'))
+        .outputs(ore('dustAmmoniumChloride') * 12)
+        .fluidOutputs(fluid('dense_steam') * 4800)
+        .fluidOutputs(fluid('hydrogen_chloride') * 4000)
+        .duration(500)
+        .EUt(Globals.voltAmps[3])
+
+MACERATOR.recipeBuilder()
+        .inputs(metaitem('sponge.ruthenium'))
+        .outputs(metaitem('dustRuthenium'))
+        .duration(240)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 

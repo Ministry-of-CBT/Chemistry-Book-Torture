@@ -293,6 +293,7 @@ eventManager.listen {
         customMetaItems.addItem(6207, "sponge.cadmium")
         customMetaItems.addItem(6208, "sponge.indium")
         customMetaItems.addItem(6209, "sponge.osmium")
+        customMetaItems.addItem(6210, "sponge.ruthenium")
 
         // Anode slimes 6300-6400
         customMetaItems.addItem(6300, "anode_slime.gold")
