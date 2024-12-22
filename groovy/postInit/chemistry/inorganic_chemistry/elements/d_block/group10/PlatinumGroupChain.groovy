@@ -476,52 +476,56 @@ CSTR.recipeBuilder()
 
 DISTILLATION_TOWER.recipeBuilder()
         .fluidInputs(fluid('chlorate_treated_pgm_solution') * 1000)
-        .fluidOutputs(fluid('os_ru_tetroxide_mixture') * 30)
-        .fluidOutputs(fluid('os_ru_free_pgm_solution') * 970)
+        .fluidOutputs(fluid('os_ru_tetroxide_mixture') * 90)
+        .fluidOutputs(fluid('os_ru_free_pgm_solution') * 910)
         .duration(20)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-// OsO4 + 2RuO4 + 32HCl(H2O) -> H2OsCl6 + 2H3RuCl6 + 42H2O + 7Cl2
+// OsO4 + 8RuO4 + 98HCl(H2O) -> H2OsCl6 + 8H3RuCl6 + 134H2O + 22Cl2
 // All of the fun byproducts are pretended to just stay in the Ru solution
 // Also technically we should have hexachlororuthenic(III, IV) acid, but that's too complicated
 BCR.recipeBuilder()
-        .fluidInputs(fluid('os_ru_tetroxide_mixture') * 30)
-        .fluidInputs(fluid('hydrochloric_acid') * 320)
-        .fluidOutputs(fluid('os_ru_solution') * 450)
-        .fluidOutputs(fluid('chlorine') * 70)
+        .fluidInputs(fluid('os_ru_tetroxide_mixture') * 90)
+        .fluidInputs(fluid('hydrochloric_acid') * 980)
+        .fluidOutputs(fluid('os_ru_solution') * 1430)
+        .fluidOutputs(fluid('chlorine') * 220)
         .duration(60)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 // Distill out with hydrogen peroxide
 // Base: H2OsCl6 + 5H2O2 -> OsO4 + 3Cl2 + 6H2O
-// H2OsCl6 + 2H3RuCl6 + 42H2O + 5H2O2 -> OsO4 + 2H3RuCl6 + 48H2O + 3Cl2
+// H2OsCl6 + 8H3RuCl6 + 134H2O + 5H2O2 -> OsO4 + 8H3RuCl6 + 140H2O + 3Cl2
 SIEVE_DT.recipeBuilder()
-        .fluidInputs(fluid('os_ru_solution') * 450)
+        .fluidInputs(fluid('os_ru_solution') * 1430)
         .fluidInputs(fluid('hydrogen_peroxide_solution') * 50)
-        .fluidOutputs(fluid('hydrogen_hexachlororuthenate_solution') * 500)
+        .fluidOutputs(fluid('hydrogen_hexachlororuthenate_solution') * 1480)
         .fluidOutputs(fluid('osmium_tetroxide') * 10)
         .fluidOutputs(fluid('chlorine') * 30)
-        .duration(60)
+        .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
+// 8H2RuCl6 + 140H2O + 16NH3 -> 8(NH4)2RuCl6 + 140H2O
 SIEVE_DT.recipeBuilder()
-        .fluidInputs(fluid('hydrogen_hexachlororuthenate_solution') * 500)
-        .fluidInputs(fluid('ammonia') * 30)
-        .fluidOutputs(fluid('ammonium_hexachlororuthenate_solution') * 500)
+        .fluidInputs(fluid('hydrogen_hexachlororuthenate_solution') * 1480)
+        .fluidInputs(fluid('ammonia') * 160)
+        .fluidOutputs(fluid('ammonium_hexachlororuthenate_solution') * 1480)
         .duration(60)
         .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
-ROASTER.recipeBuilder()
-        .fluidInputs(fluid('ammonium_hexachlororuthenate_solution') * 5000)
-        .fluidInputs(fluid('hydrogen') * 2000)
-        .outputs(metaitem('sponge.ruthenium'))
-        .outputs(ore('dustAmmoniumChloride') * 12)
-        .fluidOutputs(fluid('dense_steam') * 4800)
-        .fluidOutputs(fluid('hydrogen_chloride') * 4000)
+// 8(NH4)2RuCl6 + 140H2O + 32H -> 16NH4Cl + 8Ru + 140H2O + 32HCl
+// 2(NH4)2RuCl6 + 35H2O + 8H -> 4NH4Cl + 2Ru + 35H2O + 8HCl
+// The input is 370
+REACTION_FURNACE.recipeBuilder()
+        .fluidInputs(fluid('ammonium_hexachlororuthenate_solution') * 370)
+        .fluidInputs(fluid('hydrogen') * 80)
+        .chancedOutput(metaitem('sponge.ruthenium') * 2, 100, 0)
+        .chancedOutput(ore('dustAmmoniumChloride') * 24, 100, 0)
+        .fluidOutputs(fluid('dense_steam') * 350)
+        .fluidOutputs(fluid('hydrogen_chloride') * 80)
         .duration(500)
         .EUt(Globals.voltAmps[3])
 
@@ -569,9 +573,9 @@ MACERATOR.recipeBuilder()
 //Output: Solution Pt,Pd,Rh,Ir,Au
 
 DISTILLATION_TOWER.recipeBuilder()
-        .fluidInputs(fluid('os_ru_free_pgm_solution') * 970)
+        .fluidInputs(fluid('os_ru_free_pgm_solution') * 910)
         .outputs(metaitem('dustSilverChloride') * 2)
-        .fluidOutputs(fluid('silver_free_pgm_solution') * 950)
+        .fluidOutputs(fluid('silver_free_pgm_solution') * 890)
         .fluidOutputs(fluid('hydrogen_chloride'))
         .duration(100)
         .EUt(Globals.voltAmps[2])
@@ -586,10 +590,10 @@ DISTILLATION_TOWER.recipeBuilder()
 
 //extraction with dibutyl carbitol
 CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('silver_free_pgm_solution') * 950)
-        .fluidInputs(fluid('dibutyl_carbitol') * 1000)
-        .fluidOutputs(fluid('gold_extract') * 1000)
-        .fluidOutputs(fluid('gold_free_pgm_solution') * 940)
+        .fluidInputs(fluid('silver_free_pgm_solution') * 890)
+        .fluidInputs(fluid('dibutyl_carbitol') * 10)
+        .fluidOutputs(fluid('gold_extract') * 10)
+        .fluidOutputs(fluid('gold_free_pgm_solution') * 880)
         .duration(100)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -629,21 +633,20 @@ CENTRIFUGE.recipeBuilder()
 //solution with shit + nh4cl*h2o -> (nh4)2[ptcl6] + platinum-free pgm solution
 //(NH4)2[PtCl6] + 2H2 --350*c-> Pt + 2NH4Cl + 4HCl
 
-BCR.recipeBuilder()
-        .fluidInputs(fluid('gold_free_pgm_solution') * 940)
-        .fluidInputs(fluid('chlorine') * 570)
-        .fluidInputs(fluid('oxalic_acid_solution'))
-        .fluidOutputs(fluid('chlorinated_pgm_solution'))
-        .fluidOutputs(fluid('carbon_dioxide'))
+BR.recipeBuilder()
+        .fluidInputs(fluid('gold_free_pgm_solution') * 880)
+        .fluidInputs(fluid('oxalic_acid_solution') * 10)
+        .fluidOutputs(fluid('reduced_pgm_solution') * 880)
+        .fluidOutputs(fluid('carbon_dioxide') * 20)
         .duration(20)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 BR.recipeBuilder()
-        .fluidInputs(fluid('chlorinated_pgm_solution') * 940)
-        .fluidInputs(fluid('ammonium_chloride_solution') * 570)
-        .fluidOutputs(fluid('platinum_free_pgm_solution') * 370)
-        .chancedOutput(metaitem('dustAmmoniumHexachloroplatinate') * 34, 6064, 0) // The chance is 57 / 94
+        .fluidInputs(fluid('reduced_pgm_solution') * 880)
+        .fluidInputs(fluid('ammonium_chloride_solution') * 1140)
+        .fluidOutputs(fluid('platinum_free_pgm_solution') * 310)
+        .chancedOutput(metaitem('dustAmmoniumHexachloroplatinate') * 17, 6064, 0) // The chance is 57 / 94
         .duration(20)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -694,10 +697,10 @@ CSTR.recipeBuilder()
 //3[(Pd(NH3)2)Cl2)] -(inert atmosphere)-> 3Pd + 4NH4Cl + 2HCl + N2
 
 CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('platinum_free_pgm_solution') * 370)
+        .fluidInputs(fluid('platinum_free_pgm_solution') * 310)
         .fluidInputs(fluid('di_n_hexyl_sulfide') * 250)
         .fluidOutputs(fluid('palladium_extract') * 250)
-        .fluidOutputs(fluid('palladium_free_pgm_solution') * 120)
+        .fluidOutputs(fluid('rh_ir_pgm_solution') * 60)
         .duration(100)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -722,7 +725,6 @@ BR.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-
 //IRIDIUM
 
 //Oxidation with Cl2
@@ -731,31 +733,76 @@ BR.recipeBuilder()
 //Output: H2(IrCl6) extract
 //Output: Solution Rh
 
-/*BCR.recipeBuilder()
-        .fluidInputs(fluid('chlorine'))
-        .fluidInputs(fluid('tributylphosphate'))
-        .fluidInputs(fluid('distilled_water'))
-        .fluidOutputs(fluid('rhodium_ruthenium_solution'))
-        .fluidOutputs(fluid('hexachloroiridium_acid'))
+// 2H3(IrCl6) + Cl2 + 2H2O + 2TBP -> 2H2(IrCl6)(TBP) + 2HCl(H2O) (Iridium solution)
+// 
+
+BCR.recipeBuilder()
+        .fluidInputs(fluid('chlorine') * 5)
+        .notConsumable(fluid('tributyl_phosphate') * 1000)
+        .fluidInputs(fluid('rh_ir_solution') * 60)
+        .fluidOutputs(fluid('hexachlororhodium_acid') * 50)
+        .fluidOutputs(fluid('hexachloroiridium_acid') * 10)
         .duration(20)
         .EUt(Globals.voltAmps[2])
-        .buildAndRegister()*/
+        .buildAndRegister()
+
+
+CRYSTALLIZER.recipeBuilder
+        .fluidInputs(fluid('hexachloroiridium_acid') * 1000)
+        .fluidInputs(fluid('ammonium') * 4000)
+        .output(metaitem('dustAmmoniumHexachloroIridate') * 21)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+REACTION_FURNACE.recipeBuilder()
+        .inputs(ore('dustAmmoniumHexachloroIridate') * 21)
+        .fluidInputs(fluid('hydrogen') * 4000)
+        .outputs(metaitem('sponge.iridium'))
+        .fluidOutputs(fluid('ammonia') * 4000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 6000)
+        .duration(240)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+MACERATOR.recipeBuilder()
+        .inputs(metaitem('sponge.iridium'))
+        .outputs(metaitem('dustIridium'))
+        .duration(240)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+
 
 //RHODIUM
 
 //Crystallization
 //Output: (NH4)3(RhCl6) crystals
-//Output: Solution, Ru
 
-/*CRYSTALLIZER.recipeBuilder
-        .fluidInputs(fluid('rhodium_ruthenium_solution'))
-        .output(metaitem.ammoniumHexachlororhodateCrystal) //IDK
-        .fluidOutputs(fluid(ruthenium_solution) )
+CRYSTALLIZER.recipeBuilder
+        .fluidInputs(fluid('hexachlororhodium_acid') * 1000)
+        .fluidInputs(fluid('ammonium') * 3000)
+        .output(metaitem('dustAmmoniumHexachloroRhodate') * 21)
         .duration(200)
         .EUt(Globals.voltAmps[2])
-        .buildAndRegister()*/
+        .buildAndRegister()
 
+REACTION_FURNACE.recipeBuilder()
+        .inputs(ore('dustAmmoniumHexachloroRhodate') * 21)
+        .fluidInputs(fluid('hydrogen') * 3000)
+        .outputs(metaitem('sponge.rhodium'))
+        .fluidOutputs(fluid('ammonia') * 3000)
+        .fluidOutputs(fluid('hydrogen_chloride') * 6000)
+        .duration(240)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 
+MACERATOR.recipeBuilder()
+        .inputs(metaitem('sponge.rhodium'))
+        .outputs(metaitem('dustRhodium'))
+        .duration(240)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
 
 // PGM PROCESSING Tier 3
 

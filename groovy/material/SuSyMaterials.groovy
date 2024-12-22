@@ -1123,7 +1123,7 @@ class SuSyMaterials {
         public static Material CementedAlluvialPGMSolution;
         public static Material AlluvialPGM;
         public static Material AmmoniumMetatungstate;
-        public static Material Diamminedichloropalladium;
+        public static Material Diaminedichloropalladium;
         public static Material NickelIINitrateSolution;
         public static Material FerroniobiumTantalum;
         public static Material TantalumPentachloride;
