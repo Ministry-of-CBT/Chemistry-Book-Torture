@@ -3593,5 +3593,24 @@ public class FirstDegreeMaterials {
                 .components(CobaltSulfate * 1, Water * 1)
                 .colorAverage()
                 .build()
+
+        // FREE IDs: 8637-8649
+
+        AmmoniumHexachlororhodate = new Material.Builder(8650, SuSyUtility.susyId('ammonium_hexachlororhodate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Rhodium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororhodate.setFormula('(NH4)3(RhCl6)', true);
+
+        AmmoniumHexachloroiridate = new Material.Builder(8651, SuSyUtility.susyId('ammonium_hexachloroiridate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Iridium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+        
+        AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
+
     }
 }

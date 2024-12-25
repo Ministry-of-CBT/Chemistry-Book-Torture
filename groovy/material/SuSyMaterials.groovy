@@ -545,21 +545,26 @@ class SuSyMaterials {
         public static Material AlkalineTrimethylpentylphosphinicAcid;
         public static Material AcidifiedTrimethylpentylphosphinicAcid;
         public static Material DehydratedTrimethylpentylphosphinicAcid;
-        public static Material OsmiumFreePGMSolution;
+        public static Material OsmiumRutheniumFreePGMSolution;
         public static Material SilverFreePGMSolution;
         public static Material GoldFreePGMSolution;
         public static Material GoldExtract;
         public static Material PlatinumFreePGMSolution;
         public static Material ChlorinatedPGMSolution;
-        public static Material PersulfateTreatedPGMSolution;
+        public static Material ChlorateTreatedPGMSolution;
         public static Material ScrubbedGoldExtract;
         public static Material ChlorinatedPGMConcentrate;
         public static Material PalladiumExtract;
-        public static Material PalladiumFreePGMSolution;
+        public static Material RhodiumIridiumSolution;
+        public static Material RhodiumIridiumExtractionMixture;
         public static Material CobaltMatte;
         public static Material OrthoCresylicAcidMixture;
         public static Material CresolNovolacsOligomer;
         public static Material EpoxyCresolNovolacs;
+        public static Material OsmiumRutheniumTetroxideMixture;
+        public static Material OsmiumRutheniumSolution;
+
+
         // Petrochem Materials   
 
         public static Material DilutedOil;
@@ -1419,6 +1424,10 @@ class SuSyMaterials {
         public static Material PotassiumPersulfateSolution;
         public static Material PotassiumOsmateSolution;
         public static Material TetraamminepalladiumDichloride;
+        public static Material HexachloroiridicAcidSolution;
+        public static Material HexachlororhodicAcidSolution;
+        public static Material HexachlororuthenicAcidSolution;
+        public static Material AmmoniumHexachlororuthenateSolution;
 
         // Organic Chemistry Materials
 

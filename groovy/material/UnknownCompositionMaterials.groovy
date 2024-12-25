@@ -2088,7 +2088,7 @@ public class UnknownCompositionMaterials {
                 .color(0xe60e0e)
                 .build();
 
-        OsRuFreePGMSolution = new Material.Builder(4447, SuSyUtility.susyId("os_ru_free_pgm_solution"))
+        OsmiumRutheniumFreePGMSolution = new Material.Builder(4447, SuSyUtility.susyId("os_ru_free_pgm_solution"))
                 .fluid()
                 .color(0xe0dcb6)
                 .build();
@@ -2123,7 +2123,7 @@ public class UnknownCompositionMaterials {
                 .color(0xdbe0ad)
                 .build();
 
-        PersulfateTreatedPGMSolution = new Material.Builder(4454, SuSyUtility.susyId("persulfate_treated_pgm_solution"))
+        ChlorateTreatedPGMSolution = new Material.Builder(4454, SuSyUtility.susyId("chlorate_treated_pgm_solution"))
                 .fluid()
                 .color(0xccc9a9)
                 .build();
@@ -2158,6 +2158,28 @@ public class UnknownCompositionMaterials {
                 .dust()
                 .color(0xd1bf71)
                 .iconSet(DULL)
+                .build();
+
+        // FREE IDs: 4461-4469
+
+        RhodiumIridiumSolution = new Material.Builder(4470, SuSyUtility.susyId("rh_ir_solution"))
+                .fluid()
+                .color(0x9177a1)
+                .build();
+
+        RhodiumIridiumExtractionMixture = new Material.Builder(4471, SuSyUtility.susyId("rh_ir_extraction_mixture"))
+                .fluid()
+                .color(0xb3abb8)
+                .build();
+
+        OsmiumRutheniumTetroxideMixture = new Material.Builder(4472, SuSyUtility.susyId("os_ru_tetroxide_mixture"))
+                .fluid()
+                .color(0x8e8e8e)
+                .build();
+
+        OsmiumRutheniumSolution = new Material.Builder(4473, SuSyUtility.susyId("os_ru_solution"))
+                .fluid()
+                .color(0x8e8e8e)
                 .build();
 
     }

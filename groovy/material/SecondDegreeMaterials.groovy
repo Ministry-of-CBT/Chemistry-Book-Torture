@@ -730,5 +730,35 @@ public class SecondDegreeMaterials {
 
         PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
 
+        // FREE IDs: 13117-13129
+
+        HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HexachloroiridicAcid * 1, Water * 1)
+                .color(0x8f8f8f)
+                .build();
+
+        HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 3, Rhodium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororuthenicAcidSolution = new Material.Builder(13132, SuSyUtility.susyId('hexachlororuthenic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 2, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororuthenicAcidSolution.setFormula('(H2RuCl6)2(H2O)35', true)
+
+        AmmoniumHexachlororuthenateSolution = new Material.Builder(13133, SuSyUtility.susyId('ammonium_hexachlororuthenate_solution'))
+                .liquid(new FluidBuilder())
+                .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororuthenateSolution.setFormula('([NH4]2RuCl6)2(H2O)35', true)
+
     }
 }
