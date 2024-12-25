@@ -3594,7 +3594,21 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        // FREE IDs: 8637-8649
+        // 8638: Co3O4
+
+        LithiumNitrate = new Material.Builder(8639, SuSyUtility.susyId('lithium_nitrate'))
+                .dust()
+                .components(Lithium * 1, Nitrogen * 1, Oxygen * 3)
+                .color(0xffffff)
+                .build()
+
+        LithiumNitrateSolution = new Material.Builder(8640, SuSyUtility.susyId('lithium_nitrate_solution'))
+                .liquid()
+                .components(LithiumNitrate * 2, Water * 1)
+                .colorAverage()
+                .build()
+
+        // FREE IDs: 8641-8649
 
         AmmoniumHexachlororhodate = new Material.Builder(8650, SuSyUtility.susyId('ammonium_hexachlororhodate'))
                 .dust()
