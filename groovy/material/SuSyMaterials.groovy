@@ -1230,6 +1230,8 @@ class SuSyMaterials {
         public static Material CobaltSulfateSolution;
         public static Material LithiumNitrate;
         public static Material LithiumNitrateSolution;
+        public static Material AmmoniumHexachlororhodate;
+        public static Material AmmoniumHexachloroiridate;
 
         // HP Materials
 
