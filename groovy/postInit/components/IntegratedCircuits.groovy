@@ -69,7 +69,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * (val * 2))
                 .outputs(metaitem('circuit.assembly') * 1)
                 .duration(300)
-                .EUt(240)
+                .EUt(120)
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
