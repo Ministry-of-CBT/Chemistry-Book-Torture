@@ -43,7 +43,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.microprocessor') * 6)
                 .duration(200)
-                .EUt(60)
+                .EUt(120)
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -56,7 +56,7 @@ Globals.solders.each { key, val ->
                 .fluidInputs(fluid(key) * val)
                 .outputs(metaitem('circuit.processor') * 2)
                 .duration(200)
-                .EUt(60)
+                .EUt(120)
                 .buildAndRegister()
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -83,7 +83,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.workstation'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(400)
-                .EUt(480)
+                .EUt(120)
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
@@ -97,7 +97,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.mainframe'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(500)
-                .EUt(480)
+                .EUt(120)
                 .buildAndRegister();
 
 }
