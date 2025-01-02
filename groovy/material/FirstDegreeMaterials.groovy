@@ -758,13 +758,13 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        Diaminedichloropalladium = new Material.Builder(8201, SuSyUtility.susyId('diaminedichloropalladium'))
+        Diamminedichloropalladium = new Material.Builder(8201, SuSyUtility.susyId('diamminedichloropalladium'))
                 .dust()
                 .components(Palladium, Nitrogen * 2, Hydrogen * 6, Chlorine * 2)
                 .color(0xd4d192)
                 .build();
 
-        Diaminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
+        Diamminedichloropalladium.setFormula("Pd(NH3)2Cl2", true)
 
         DecarburizedAir = new Material.Builder(8202, SuSyUtility.susyId('decarburized_air'))
                 .gas()
@@ -3586,12 +3586,6 @@ public class FirstDegreeMaterials {
                 .dust()
                 .components(Cobalt * 1, Sulfur * 1, Oxygen * 4)
                 .color(0xbb7694)
-                .build()
-
-        CobaltSulfateSolution = new Material.Builder(8637, SuSyUtility.susyId('cobalt_sulfate_solution'))
-                .liquid()
-                .components(CobaltSulfate * 1, Water * 1)
-                .colorAverage()
                 .build()
 
         // 8638: Co3O4

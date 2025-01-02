@@ -2182,5 +2182,11 @@ public class UnknownCompositionMaterials {
                 .color(0x8e8e8e)
                 .build();
 
+        ReducedGoldFreePGMSolution = new Material.Builder(4474, SuSyUtility.susyId("reduced_gold_free_pgm_solution"))
+                .fluid()
+                .color(0x82806b)
+                .build();
+
+
     }
 }

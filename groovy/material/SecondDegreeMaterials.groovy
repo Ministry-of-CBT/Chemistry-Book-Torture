@@ -714,23 +714,35 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
         
-        PotassiumPersulfateSolution = new Material.Builder(13115, SuSyUtility.susyId('potassium_persulfate_solution'))
-                .fluid()
-                .components(PotassiumPersulfate * 1, Water * 1)
+        ImpureLithiumCarbonateSolution = new Material.Builder(13115, SuSyUtility.susyId("impure_lithium_carbonate_solution"))
+                .liquid()
+                .components(Carbon * 2, Lithium * 2, Oxygen * 3, Water)
                 .colorAverage()
-                .build();
+                .build()
+                .setFormula("(C)(Li2CO3)(H2O)", true);
 
-        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+        LithiumCarbonateSolution = new Material.Builder(13116, SuSyUtility.susyId("lithium_carbonate_solution"))
+                .liquid()
+                .components(Lithium * 2, Carbon * 1, Oxygen * 3, Water)
+                .colorAverage()
+                .build()
+                .setFormula("(Li2CO3)(H2O)", true);
 
-        PotassiumOsmateSolution = new Material.Builder(13116, SuSyUtility.susyId('potassium_osmate_solution'))
-                .fluid()
-                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
-                .color(0xbf21a0)
-                .build();
+        AcidicArgonHydrogenMixture = new Material.Builder(13117, SuSyUtility.susyId("acidic_argon_hydrogen_mixture"))
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Argon, Hydrogen * 4, HydrogenChloride)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(HCl)(H)", true);
 
-        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
+        AmmoniacalArgonHydrogenMixture = new Material.Builder(13118, SuSyUtility.susyId("ammoniacal_argon_hydrogen_mixture"))
+                .gas()
+                .components(Argon, Hydrogen * 4, Ammonia)
+                .colorAverage()
+                .build()
+                .setFormula("(Ar)(NH3)(H)", true)
 
-        // FREE IDs: 13117-13129
+        // FREE IDs: 13119-13129
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -759,6 +771,30 @@ public class SecondDegreeMaterials {
                 .build();
 
         AmmoniumHexachlororuthenateSolution.setFormula('([NH4]2RuCl6)2(H2O)35', true)
+
+        TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
+                .liquid()
+                .components(Ammonia * 4, Palladium * 1, Chlorine * 2, Water * 1)
+                .colorAverage()
+                .build();
+        
+        TetraamminepalladiumDichloride.setFormula('Pd(NH3)4Cl2(H2O)', true)
+
+        PotassiumPersulfateSolution = new Material.Builder(13135, SuSyUtility.susyId('potassium_persulfate_solution'))
+                .fluid()
+                .components(PotassiumPersulfate * 1, Water * 1)
+                .colorAverage()
+                .build();
+
+        PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+
+        PotassiumOsmateSolution = new Material.Builder(13136, SuSyUtility.susyId('potassium_osmate_solution'))
+                .fluid()
+                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
+                .color(0xbf21a0)
+                .build();
+
+        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
 
     }
 }

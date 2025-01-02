@@ -548,8 +548,10 @@ class SuSyMaterials {
         public static Material OsmiumRutheniumFreePGMSolution;
         public static Material SilverFreePGMSolution;
         public static Material GoldFreePGMSolution;
+        public static Material ReducedGoldFreePGMSolution;
         public static Material GoldExtract;
         public static Material PlatinumFreePGMSolution;
+        public static Material PalladiumFreePGMSolution;
         public static Material ChlorinatedPGMSolution;
         public static Material ChlorateTreatedPGMSolution;
         public static Material ScrubbedGoldExtract;
@@ -1128,7 +1130,7 @@ class SuSyMaterials {
         public static Material CementedAlluvialPGMSolution;
         public static Material AlluvialPGM;
         public static Material AmmoniumMetatungstate;
-        public static Material Diaminedichloropalladium;
+        public static Material Diamminedichloropalladium;
         public static Material NickelIINitrateSolution;
         public static Material FerroniobiumTantalum;
         public static Material TantalumPentachloride;
@@ -1227,7 +1229,6 @@ class SuSyMaterials {
         public static Material HSLAEightyX;
         public static Material FoodGradeStainlessSteel;
         public static Material CobaltSulfate;
-        public static Material CobaltSulfateSolution;
         public static Material LithiumNitrate;
         public static Material LithiumNitrateSolution;
         public static Material AmmoniumHexachlororhodate;
@@ -1427,11 +1428,12 @@ class SuSyMaterials {
         public static Material AmmoniacalArgonHydrogenMixture;
         public static Material PotassiumPersulfateSolution;
         public static Material PotassiumOsmateSolution;
-        public static Material TetraamminepalladiumDichloride;
         public static Material HexachloroiridicAcidSolution;
         public static Material HexachlororhodicAcidSolution;
         public static Material HexachlororuthenicAcidSolution;
         public static Material AmmoniumHexachlororuthenateSolution;
+        public static Material TetraamminepalladiumDichloride;
+
 
         // Organic Chemistry Materials
 
@@ -1550,7 +1552,7 @@ class SuSyMaterials {
         public static Material Durene;
         public static Material PyromelliticDianhydride;
         public static Material FourFourOxydianiline;
-        public static Material FourFourOxydianilineSlurry
+        public static Material FourFourOxydianilineSlurry;
         public static Material KaptonK;
         public static Material KaptonE;
         public static Material BiphenylTetracarboxylicAcidDianhydride;
