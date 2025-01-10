@@ -1453,7 +1453,7 @@ public class FirstDegreeMaterials {
         IronSulfate = new Material.Builder(8310, SuSyUtility.susyId('iron_sulfate'))
                 .dust()
                 .components(Iron, Sulfur, Oxygen * 4)
-                .colorAverage()
+                .color(0x42f578)
                 .build();
 
         RoastedPetalite = new Material.Builder(8311, SuSyUtility.susyId('roasted_petalite'))

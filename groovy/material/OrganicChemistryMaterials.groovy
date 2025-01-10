@@ -2636,5 +2636,14 @@ public class OrganicChemistryMaterials {
                 .color(0xb9ac9a)
                 .build();
 
+        CobaltExtractionMixture = new Material.Builder(15419, SuSyUtility.susyId("cobalt_extraction_mixture"))
+                .fluid()
+                .components(TrimethylpentylphosphinicAcid * 1, OrthoXylene * 1)
+                .colorAverage()
+                .build();
+
+        CobaltExtractionMixture.setFormula("(C8H10)(C16H35O2P)", true)
+
+
     }
 }

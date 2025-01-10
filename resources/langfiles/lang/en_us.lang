@@ -2109,6 +2109,62 @@ susy.material.two_four_five_xylenol_mixture=2,4/5-Xylenol Mixture
 susy.material.cresol_novolacs_oligomer=Cresol Novolacs Oligomer
 susy.material.epoxy_cresol_novolacs=Epoxy Cresol Novolacs (ECN)
 
+# Platinum Group Metals Chain
+susy.material.copper_rich_pgm_solids=Copper-Rich PGM Solids
+susy.material.pgm_concentrate=PGM Concentrate
+susy.material.copper_selenide_precipitate=Copper Selenide Precipitate
+susy.material.selenium_free_calcine=Selenium-Free Calcine
+susy.material.nickel_cobalt_sulfate=Nickel-Cobalt Sulfate
+susy.material.green_matte=Green Matte
+susy.material.white_matte=White Matte
+susy.material.selenium_dioxide=Selenium Dioxide
+susy.material.ammonium_hexachlororhodate=Ammonium Hexachlororhodate(IV)
+susy.material.ammonium_hexachloroiridate=Ammonium Hexachloroiridate(IV)
+susy.material.acidic_nickel_copper_sulfate_solution=Acidic Nickel-Copper Sulfate Solution
+susy.material.oxidized_pgm_leach=Oxidized PGM Leach
+susy.material.impure_nickel_sulfate=Impure Nickel Sulfate
+susy.material.pgm_copper_leach_slurry=PGM Copper Leach Slurry
+susy.material.pgm_free_copper_leach=PGM-Free Copper Leach
+susy.material.sulfidic_copper_leach=Sulfidic Copper Leach
+susy.material.selenium_free_copper_leach=Selenium-Free Copper Leach
+susy.material.nickel_cobalt_sulfate_solution=Nickel-Cobalt Sulfate Solution
+susy.material.iron_sulfate_mother_liquor=Iron Sulfate Mother Liquor
+susy.material.cobalt_extract=Cobalt Extract
+susy.material.crude_trimethylpentylphosphinic_acid=Crude Trimethylpenthylphosphinic Acid
+susy.material.alkaline_trimethylpentylphosphinic_acid=Alkaline Trimethylpenthylphosphinic Acid
+susy.material.acidified_trimethylpentylphosphinic_acid=Acidified Trimethylpenthylphosphinic Acid
+susy.material.dehydrated_trimethylpentylphosphinic_acid=Dehydrated Trimethylpenthylphosphinic Acid
+susy.material.os_ru_free_pgm_solution=Osmium-Ruthenium-Free PGM Solution
+susy.material.silver_free_pgm_solution=Silver-Free PGM Solution
+susy.material.gold_free_pgm_solution=Gold-Free PGM Solution
+susy.material.gold_extract=Gold Extract
+susy.material.scrubbed_gold_extract=Scrubbed Gold Extract
+susy.material.platinum_free_pgm_solution=Platinum-Free PGM Solution
+susy.material.chlorate_treated_pgm_solution=Chlorated-Treated PGM Solution
+susy.material.chlorinated_pgm_concentrate=Chlorinated PGM Concentrate
+susy.material.palladium_extract=Palladium Extract
+susy.material.diisobutylene_mixture=Diisobutylene Mixture
+susy.material.rh_ir_solution=Rhodium-Iridium Solution
+susy.material.rh_ir_extraction_mixture=Rhodium-Iridium Extraction Mixture
+susy.material.os_ru_tetroxide_mixture=Osmium-Ruthenium Tetroxide Mixture
+susy.material.os_ru_solution=Osmium-Ruthenium Solution
+susy.material.reduced_gold_free_pgm_solution=Reduced Gold-Free PGM Solution
+susy.material.hexachloroiridic_acid_solution=Hexachloroiridic Acid Solution
+susy.material.hexachlororhodic_acid_solution=Hexachlororhodic Acid Solution
+susy.material.hexachlororuthenic_acid_solution=Hydrogen Hexachlororuthenate(IV) Solution
+susy.material.ammonium_hexachlororuthenate_solution=Ammonium Hexachlororuthenate Solution
+susy.material.tetraamminepalladium_dichloride=Tetraamminepalladium Dichloride
+susy.material.potassium_persulfate_solution=Potassium Persulfate Solution
+susy.material.potassium_osmate_solution=Potassium Osmate Solution
+susy.material.diisobutylene=Diisobutylene
+susy.material.sodium_hypophosphite_solution=Sodium Hypophosphite Solution
+susy.material.trimethylpentylphosphinic_acid=Trimethylpentylphosphinic Acid
+susy.material.one_hexanethiol=1-Hexanethiol
+susy.material.one_bromohexane=1-Bromohexane
+susy.material.di_n_hexyl_sulfide=Di-n-hexyl Sulfide
+susy.material.triisobutylene=Triisobutylene
+susy.material.cobalt_extraction_mixture=Cobalt Extraction Mixture
+
 # Isotopes
 
 # GregTech RecipeMaps

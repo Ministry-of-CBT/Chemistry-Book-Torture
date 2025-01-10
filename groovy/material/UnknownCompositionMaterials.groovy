@@ -1994,47 +1994,48 @@ public class UnknownCompositionMaterials {
 
         OxidizedPGMLeach = new Material.Builder(4428, SuSyUtility.susyId("oxidized_pgm_leach"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x1b261d)
                 .build();
 
         ImpureNickelSulfate = new Material.Builder(4429, SuSyUtility.susyId("impure_nickel_sulfate"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x1b4a1f)
                 .build();
 
         CopperRichPGMSolids = new Material.Builder(4430, SuSyUtility.susyId("copper_rich_pgm_solids"))
                 .dust()
-                .color(0xe60e0e)
+                .color(0x374529)
                 .build();
 
         PGMCopperLeachSlurry = new Material.Builder(4431, SuSyUtility.susyId("pgm_copper_leach_slurry"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x334520)
                 .build();
 
         PGMFreeCopperLeach = new Material.Builder(4432, SuSyUtility.susyId("pgm_free_copper_leach"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0xb35f1b)
                 .build();
 
         PGMConcentrate = new Material.Builder(4433, SuSyUtility.susyId("pgm_concentrate"))
                 .dust()
                 .color(0xe60e0e)
+                .iconSet(SHINY)
                 .build();
 
         SulfidicCopperLeach = new Material.Builder(4434, SuSyUtility.susyId("sulfidic_copper_leach"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0xb3562b)
                 .build();
 
         CopperSelenidePrecipitate = new Material.Builder(4435, SuSyUtility.susyId("copper_selenide_precipitate"))
                 .dust()
-                .color(0xe60e0e)
+                .color(0xafc474)
                 .build();
 
         SeleniumFreeCopperLeach = new Material.Builder(4436, SuSyUtility.susyId("selenium_free_copper_leach"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0xf57242)
                 .build();
 
         SeleniumFreeCalcine = new Material.Builder(4437, SuSyUtility.susyId("selenium_free_calcine"))
@@ -2044,28 +2045,23 @@ public class UnknownCompositionMaterials {
 
         NickelCobaltSulfate = new Material.Builder(4438, SuSyUtility.susyId("nickel_cobalt_sulfate"))
                 .dust()
-                .color(0xe60e0e)
+                .color(0x48852c)
                 //.components(Nickel * 1, Cobalt * 1, Sulfur, Oxygen * 4)
                 .build();
 
         NickelCobaltSulfateSolution = new Material.Builder(4439, SuSyUtility.susyId("nickel_cobalt_sulfate_solution"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x48852c)
                 .build();
 
         IronSulfateMotherLiquor = new Material.Builder(4440, SuSyUtility.susyId("iron_sulfate_mother_liquor"))
                 .fluid()
-                .color(0xe60e0e)
-                .build();
-
-        CobaltExtractionMixture = new Material.Builder(4441, SuSyUtility.susyId("cobalt_extraction_mixture"))
-                .fluid()
-                .color(0xe60e0e)
+                .color(0x42f578)
                 .build();
 
         CobaltExtract = new Material.Builder(4442, SuSyUtility.susyId("cobalt_extract"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x5e8e8e)
                 .build();
 
         CrudeTrimethylpentylphosphinicAcid = new Material.Builder(4443, SuSyUtility.susyId("crude_trimethylpentylphosphinic_acid"))
@@ -2075,17 +2071,17 @@ public class UnknownCompositionMaterials {
 
         AlkalineTrimethylpentylphosphinicAcid = new Material.Builder(4444, SuSyUtility.susyId("alkaline_trimethylpentylphosphinic_acid"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x360e0e)
                 .build();
 
         AcidifiedTrimethylpentylphosphinicAcid = new Material.Builder(4445, SuSyUtility.susyId("acidified_trimethylpentylphosphinic_acid"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x663e1e)
                 .build();
 
         DehydratedTrimethylpentylphosphinicAcid = new Material.Builder(4446, SuSyUtility.susyId("dehydrated_trimethylpentylphosphinic_acid"))
                 .fluid()
-                .color(0xe60e0e)
+                .color(0x663e00)
                 .build();
 
         OsmiumRutheniumFreePGMSolution = new Material.Builder(4447, SuSyUtility.susyId("os_ru_free_pgm_solution"))
@@ -2118,10 +2114,7 @@ public class UnknownCompositionMaterials {
                 .color(0xbfb984)
                 .build();
 
-        ChlorinatedPGMSolution = new Material.Builder(4453, SuSyUtility.susyId("chlorinated_pgm_solution"))
-                .fluid()
-                .color(0xdbe0ad)
-                .build();
+        // FREE ID: 4453
 
         ChlorateTreatedPGMSolution = new Material.Builder(4454, SuSyUtility.susyId("chlorate_treated_pgm_solution"))
                 .fluid()
@@ -2133,10 +2126,7 @@ public class UnknownCompositionMaterials {
                 .color(0xaba07e)
                 .build();
 
-        PalladiumFreePGMSolution = new Material.Builder(4456, SuSyUtility.susyId("palladium_free_pgm_solution"))
-                .fluid()
-                .color(0xaba07e)
-                .build();
+        // FREE ID: 4456
 
         PalladiumExtract = new Material.Builder(4457, SuSyUtility.susyId("palladium_extract"))
                 .fluid()
