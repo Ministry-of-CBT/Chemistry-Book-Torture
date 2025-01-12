@@ -770,7 +770,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        AmmoniumHexachlororuthenateSolution.setFormula('([NH4]2[RuCl6])2(H2O)35', true)
+        AmmoniumHexachlororuthenateSolution.setFormula('((NH4)2[RuCl6])2(H2O)35', true)
 
         TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
                 .liquid()
