@@ -23,6 +23,7 @@ VACUUM_DT = recipemap('vacuum_distillation')
 BCR = recipemap('bubble_column_reactor')
 SIEVE_DT = recipemap('sieve_distillation')
 PHASE_SEPARATOR = recipemap('phase_separator')
+VACUUM_CHAMBER = recipemap('vacuum_chamber')
 
 //LOW YIELD CHAIN FROM SECONDARY ORES
 MACERATOR.recipeBuilder()
@@ -506,7 +507,7 @@ CSTR.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-DISTILLATION_TOWER.recipeBuilder()
+VACUUM_CHAMBER.recipeBuilder()
         .fluidInputs(fluid('chlorate_treated_pgm_solution') * 1000)
         .fluidOutputs(fluid('os_ru_tetroxide_mixture') * 90)
         .fluidOutputs(fluid('os_ru_free_pgm_solution') * 910)
