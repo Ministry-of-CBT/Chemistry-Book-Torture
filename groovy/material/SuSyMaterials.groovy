@@ -565,7 +565,8 @@ class SuSyMaterials {
         public static Material EpoxyCresolNovolacs;
         public static Material OsmiumRutheniumTetroxideMixture;
         public static Material OsmiumRutheniumSolution;
-
+        public static Material ChlorinatedRhodiumIridiumSolution;
+        public static Material OrganicIridiumSolution;
 
         // Petrochem Materials   
 

@@ -2114,14 +2114,22 @@ public class UnknownCompositionMaterials {
                 .color(0xbfb984)
                 .build();
 
-        // FREE ID: 4453
+        ChlorinatedRhodiumIridiumSolution = new Material.Builder(4453, SuSyUtility.susyId("chlorinated_rh_ir_solution"))
+                .fluid()
+                .color(0xa39bb8)
+                .build();
 
         ChlorateTreatedPGMSolution = new Material.Builder(4454, SuSyUtility.susyId("chlorate_treated_pgm_solution"))
                 .fluid()
                 .color(0xccc9a9)
                 .build();
 
-        // FREE ID: 4455-6
+        OrganicIridiumSolution = new Material.Builder(4455, SuSyUtility.susyId("organic_iridium_solution"))
+                .fluid()
+                .color(0x8e8e8e)
+                .build();
+
+        // FREE ID: 4456
 
         PalladiumExtract = new Material.Builder(4457, SuSyUtility.susyId("palladium_extract"))
                 .fluid()
@@ -2158,13 +2166,13 @@ public class UnknownCompositionMaterials {
                 .build();
 
         OsmiumRutheniumTetroxideMixture = new Material.Builder(4472, SuSyUtility.susyId("os_ru_tetroxide_mixture"))
-                .fluid()
+                .gas()
                 .color(0x8e8e8e)
                 .build();
 
         OsmiumRutheniumSolution = new Material.Builder(4473, SuSyUtility.susyId("os_ru_solution"))
                 .fluid()
-                .color(0x8e8e8e)
+                .color(0x7e8e8e)
                 .build();
 
         ReducedGoldFreePGMSolution = new Material.Builder(4474, SuSyUtility.susyId("reduced_gold_free_pgm_solution"))
