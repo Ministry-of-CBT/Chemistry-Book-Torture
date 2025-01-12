@@ -747,7 +747,7 @@ public class SecondDegreeMaterials {
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .components(HexachloroiridicAcid * 1, Water * 1)
-                .color(0x8f8f8f)
+                .colorAverage()
                 .build();
 
         HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
@@ -770,7 +770,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        AmmoniumHexachlororuthenateSolution.setFormula('([NH4]2RuCl6)2(H2O)35', true)
+        AmmoniumHexachlororuthenateSolution.setFormula('([NH4]2[RuCl6])2(H2O)35', true)
 
         TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
                 .liquid()
@@ -796,5 +796,12 @@ public class SecondDegreeMaterials {
 
         PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
 
+        CobaltSulfateSolution = new Material.Builder(13137, SuSyUtility.susyId("cobalt_sulfate_solution"))
+                .fluid()
+                .components(Cobalt * 1, Sulfur * 1, Oxygen * 4, Water * 1)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
     }
 }

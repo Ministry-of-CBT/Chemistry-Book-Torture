@@ -2121,12 +2121,7 @@ public class UnknownCompositionMaterials {
                 .color(0xccc9a9)
                 .build();
 
-        ChlorinatedPGMConcentrate = new Material.Builder(4455, SuSyUtility.susyId("chlorinated_pgm_concentrate"))
-                .fluid()
-                .color(0xaba07e)
-                .build();
-
-        // FREE ID: 4456
+        // FREE ID: 4455-6
 
         PalladiumExtract = new Material.Builder(4457, SuSyUtility.susyId("palladium_extract"))
                 .fluid()

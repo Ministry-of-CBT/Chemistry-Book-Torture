@@ -736,7 +736,7 @@ public class FirstDegreeMaterials {
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
                 .dust()
                 .iconSet(SHINY)
-                .components(Chlorine * 6, Hydrogen * 2, Iridium)
+                .components(Iridium, Chlorine * 6, Hydrogen * 2)
                 .colorAverage()
                 .build()
 
@@ -2615,14 +2615,14 @@ public class FirstDegreeMaterials {
                 .components(Selenium * 1, Oxygen * 2)
                 .colorAverage()
                 .build();
-        
-        CobaltSulfateSolution = new Material.Builder(8485, SuSyUtility.susyId("cobalt_sulfate_solution"))
-                .fluid()
-                .components(Cobalt * 1, Sulfur * 1, Oxygen * 4)
+
+        DilutePotassiumAcetateSolution = new Material.Builder(8485, SuSyUtility.susyId('potassium_acetate'))
+                .dust()
+                .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
                 .colorAverage()
                 .build();
 
-        CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
+        DilutePotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
 
         UltramaficTailingSlurry = new Material.Builder(8486, SuSyUtility.susyId('ultramafic_tailing_slurry'))
                 .liquid()
@@ -3619,6 +3619,14 @@ public class FirstDegreeMaterials {
                 .build();
         
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
+
+        PotassiumAcetateSolution = new Material.Builder(8652, SuSyUtility.susyId('potassium_acetate'))
+                .dust()
+                .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 2)
+                .colorAverage()
+                .build();
+
+        PotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)2", true)
 
     }
 }
