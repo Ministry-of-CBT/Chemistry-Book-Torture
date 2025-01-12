@@ -567,6 +567,25 @@ class SuSyMaterials {
         public static Material OsmiumRutheniumSolution;
         public static Material ChlorinatedRhodiumIridiumSolution;
         public static Material OrganicIridiumSolution;
+        public static Material DeacidifiedLipid;
+        public static Material GlycerolMethanolSolution;
+        public static Material GlycerolEthanolSolution;
+        public static Material CrudeGlycerol;
+        public static Material CrudeFattyAcidMethylEster;
+        public static Material CrudeFattyAcidEthylEster;
+        public static Material NeutralizedFattyAcidMethylEster;
+        public static Material NeutralizedFattyAcidEthylEster;
+        public static Material UnscrubbedBioDiesel;
+        public static Material MoistBioDiesel;
+        public static Material LipidBleachingMix;
+        public static Material BleachedLipid;
+        public static Material HeatedLipid;
+        public static Material HydrotreatedLipidMixture;
+        public static Material AcidicHydrogenVapor;
+        public static Material CrudeNParaffin;
+        public static Material NeutralizedNParaffin;
+        public static Material DistilledNParaffin;
+        public static Material IsomerizedParaffin;
 
         // Petrochem Materials   
 
@@ -1959,6 +1978,7 @@ class SuSyMaterials {
         public static Material OxalicAcidSolution;
         public static Material GalliumSulfateSolution;
         public static Material FormicAcidWaterAzeotrope;
+
         // Thermodynamics Materials
 
         public static Material EarthlikeAir;

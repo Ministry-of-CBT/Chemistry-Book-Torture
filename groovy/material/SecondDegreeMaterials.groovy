@@ -742,7 +742,12 @@ public class SecondDegreeMaterials {
                 .build()
                 .setFormula("(Ar)(NH3)(H)", true)
 
-        // FREE IDs: 13119-13129
+        AcidicHydrogenVapor = new Material.Builder(13119, SuSyUtility.susyId("acidic_hydrogen_vapor"))
+                .gas()
+                .components(Hydrogen * 6, CarbonDioxide * 1)
+                .color(0x003c74)
+                .build()
+                .setFormula("(H)8(CO2)", true);
 
         HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
