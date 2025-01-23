@@ -3626,7 +3626,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        PotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)2", true)
+        PotassiumAcetateSolution.setFormula("(CH3COOK)(H2O)", true)
 
     }
 }
