@@ -736,7 +736,7 @@ public class FirstDegreeMaterials {
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
                 .dust()
                 .iconSet(SHINY)
-                .components(Iridium, Chlorine * 6, Hydrogen * 2)
+                .components(Hydrogen * 2, Iridium, Chlorine * 6)
                 .colorAverage()
                 .build()
 
@@ -2616,7 +2616,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        DilutePotassiumAcetateSolution = new Material.Builder(8485, SuSyUtility.susyId('potassium_acetate'))
+        DilutePotassiumAcetateSolution = new Material.Builder(8485, SuSyUtility.susyId('dilute_potassium_acetate_solution'))
                 .dust()
                 .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
                 .colorAverage()
@@ -3620,9 +3620,9 @@ public class FirstDegreeMaterials {
         
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
 
-        PotassiumAcetateSolution = new Material.Builder(8652, SuSyUtility.susyId('potassium_acetate'))
+        PotassiumAcetateSolution = new Material.Builder(8652, SuSyUtility.susyId('potassium_acetate_solution'))
                 .dust()
-                .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 2)
+                .components(Potassium, Carbon * 2, Hydrogen * 3, Oxygen * 2, Water * 2)
                 .colorAverage()
                 .build();
 

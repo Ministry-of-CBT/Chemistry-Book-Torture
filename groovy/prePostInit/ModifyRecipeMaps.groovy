@@ -29,7 +29,6 @@ GTRecipeHandler.removeAllRecipes(GTFORecipeMaps.GREENHOUSE_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.VACUUM_RECIPES);
 GTRecipeHandler.removeAllRecipes(RecipeMaps.ELECTROLYZER_RECIPES);
 
-
 GregTechAPI.materialManager.getRegisteredMaterials().forEach(material -> {
         if (material.hasProperty(PropertyKey.FLUID) && material.getProperty(PropertyKey.FLUID).getPrimaryKey() == SusyFluidStorageKeys.SLURRY) {
                 Recipe recipe = RecipeMaps.EXTRACTOR_RECIPES.findRecipe(Integer.MAX_VALUE, Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, material)), Collections.emptyList(), false);

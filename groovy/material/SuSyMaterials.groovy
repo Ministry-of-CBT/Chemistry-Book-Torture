@@ -1848,9 +1848,9 @@ class SuSyMaterials {
         public static Material TwoSixXylenol;
         public static Material TwoFourFiveXylenolMixture;
         public static Material TrimethylpentylphosphinicAcid;
-        public static Material DiIsobutylene;
+        public static Material Diisobutylene;
         public static Material TriIsobutylene;
-        public static Material DiIsobutyleneMixture;
+        public static Material DiisobutyleneMixture;
         public static Material SodiumHypophosphiteSolution;
         public static Material OneHexanethiol;
         public static Material OneBromohexane;

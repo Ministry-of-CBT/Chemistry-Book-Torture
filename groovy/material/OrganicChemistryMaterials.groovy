@@ -250,7 +250,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        DiIsobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
+        Diisobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
                 .fluid()
                 .components(Carbon * 8, Hydrogen * 16)
                 .color(0xa79781)
@@ -2630,7 +2630,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build()
 
-        TriIsobutylene = new Material.Builder(15418, SuSyUtility.susyId('triisobutylene'))
+        Triisobutylene = new Material.Builder(15418, SuSyUtility.susyId('triisobutylene'))
                 .fluid()
                 .components(Carbon * 12, Hydrogen * 24)
                 .color(0xb9ac9a)

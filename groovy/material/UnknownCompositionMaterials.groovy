@@ -2136,7 +2136,7 @@ public class UnknownCompositionMaterials {
                 .color(0xaba07e)
                 .build();
 
-        DiIsobutyleneMixture = new Material.Builder(4458, SuSyUtility.susyId('diisobutylene_mixture'))
+        DiisobutyleneMixture = new Material.Builder(4458, SuSyUtility.susyId('diisobutylene_mixture'))
                 .fluid()
                 .color(0x5d503e)
                 .build();
