@@ -5,6 +5,9 @@ import appeng.api.features.IGrinderRecipeBuilder;
 import net.minecraftforge.event.world.BlockEvent;
 import gregtech.api.GTValues;
 import gregtech.common.blocks.BlockSurfaceRock;
+import gregtech.api.unification.material.properties.PropertyKey
+
+// import static gregtech.api.unification.material.Materials;
 
 final IGrinderRegistry reg = AEApi.instance().registries().grinder();
 
@@ -136,7 +139,7 @@ crafting.replaceShaped("gregtech:sword_flint", item('gregtech:sword').withNbt(['
         [ore("stickWood"), ore('twine'), null]
 ])
 
-//Magnetite Chunk Crafting
+// Magnetite Chunk Crafting
 crafting.addShapeless("magnetite_chunk", metaitem('chunk.magnetite'), [ore('oreMagnetite'), ore('rock')]);
 crafting.addShapeless("magnetite_chunk_1", metaitem('chunk.magnetite'), [ore('oreVanadiumMagnetite'), ore('rock')]);
 
@@ -146,55 +149,95 @@ crafting.replaceShaped("appliedenergistics2:misc/grindstone", item('appliedenerg
         [ore('cobblestone'), ore('cobblestone'), ore('cobblestone')]
 ])
 
-def GrindstoneMap = [
-        'gregtech:ore_acanthite_0': "crushedAcanthite",
-        'gregtech:ore_anglesite_0': "crushedAnglesite",
-        'gregtech:ore_sphalerite_0': "crushedSphalerite",
-        'gregtech:ore_chlorapatite_0': "crushedChlorapatite",
-        'gregtech:ore_fluorapatite_0': "crushedFluorapatite",
-        'gregtech:ore_arsenopyrite_0': "crushedArsenopyrite",
-        'gregtech:ore_pyrite_0': "crushedPyrite",
-        'gregtech:ore_banded_iron_0': "crushedBandedIron",
-        'gregtech:ore_magnetite_0': "crushedMagnetite",
-        'gregtech:ore_bornite_0': "crushedBornite",
-        'gregtech:ore_chalcopyrite_0': "crushedChalcopyrite",
-        'susy:resource_block:2': "dustSalt",
-        'susy:resource_block:3': "dustSalt",
-        'susy:resource_block:4': "dustSalt",
-        'susy:resource_block:5': "dustSalt",
-        'susy:resource_block:15': "dustCoal",
-        'gregtech:ore_cassiterite_0': "crushedCassiterite",
-        'gregtech:ore_cerussite_0': "crushedCerussite",
-        'gregtech:ore_cinnabar_0': "crushedCinnabar",
-        'gregtech:ore_stibnite_0': "crushedStibnite",
-        'gregtech:ore_coal_0': "crushedCoal",
-        'gregtech:ore_fluorite_0': "crushedFluorite",
-        'gregtech:ore_galena_0': "crushedGalena",
-        'gregtech:ore_lapis_0': "crushedLapis",
-        'gregtech:ore_lazurite_0': "crushedLazurite",
-        'gregtech:ore_sodalite_0': "crushedSodalite",
-        'gregtech:ore_lignite_0': "crushedLignite",
-        'gregtech:ore_malachite_0': "crushedMalachite",
-        'gregtech:ore_proustite_0': "crushedProustite",
-        'gregtech:ore_pyrolusite_0': "crushedPyrolusite",
-        'gregtech:ore_realgar_0': "crushedRealgar",
-        'gregtech:ore_redstone_0': "crushedRedstone",
-        'gregtech:ore_saltpeter_0': "crushedSaltpeter",
-        'gregtech:ore_chalcocite_0': "crushedChalcocite",
-        'gregtech:ore_enargite_0': "crushedEnargite",
-        'gregtech:ore_tetrahedrite_0': "crushedTetrahedrite",
-        'gregtech:ore_anthracite_0': "crushedAnthracite"
+// AE2 Grindstone Ore Processing 
+def GrindstoneOreList = [
+        'acanthite',
+        'anglesite',
+        'sphalerite',
+        'chlorapatite',
+        'fluorapatite',
+        'arsenopyrite',
+        'pyrite',
+        'banded_iron',
+        'magnetite',
+        'bornite',
+        'chalcopyrite',
+        'cassiterite',
+        'cerussite',
+        'cinnabar',
+        'stibnite',
+        'coal',
+        'fluorite',
+        'galena',
+        'lapis',
+        'lazurite',
+        'sodalite',
+        'lignite',
+        'malachite',
+        'proustite',
+        'pyrolusite',
+        'realgar',
+        'redstone',
+        'saltpeter',
+        'chalcocite',
+        'enargite',
+        'tetrahedrite',
+        'anthracite'
 ]
 
-for (key in GrindstoneMap) {
-    final IGrinderRecipeBuilder builder = reg.builder();
+def GrindstoneDepositMap = [
+        'susy:resource_block:2': metaitem("dustSalt") * 3,
+        'susy:resource_block:3': metaitem("dustSalt") * 3,
+        'susy:resource_block:4': metaitem("dustSalt") * 3,
+        'susy:resource_block:5': metaitem("dustSalt") * 3,
+        'susy:resource_block:15': metaitem("dustCoal") * 12,
+]
 
-    builder.withInput(item(key.getKey()) * 2)
-    builder.withOutput(metaitem(key.getValue()) * 3)
+for (mat_name in GrindstoneOreList) 
+{
+    final IGrinderRecipeBuilder builder = reg.builder();
+    def mat = material(mat_name)
+    def mat_cap = mat.toCamelCaseString()
+    mat_cap = mat_cap.substring(0, 1).toUpperCase() + mat_cap.substring(1);
+
+    log.info(mat)
+    log.info(mat_cap)
+    log.info(mat.oreMultiplier())
+
+    builder.withInput(item("gregtech:ore_" + mat + "_0") * 2)
+    builder.withOutput(metaitem('crushed' + mat_cap) * (int)(mat.oreMultiplier() * 3))
     builder.withTurns(5)
 
     reg.addRecipe(builder.build())
 }
+
+for (key in GrindstoneDepositMap) {
+    final IGrinderRecipeBuilder builder = reg.builder();
+
+    builder.withInput(item(key.getKey()) * 2)
+    builder.withOutput(key.getValue())
+    builder.withTurns(5)
+
+    reg.addRecipe(builder.build())
+}
+
+// {
+//     final IGrinderRecipeBuilder builder = reg.builder();
+//     def mat_name = 'pyrite'
+//     def mat_cap = mat_name.substring(0, 1).toUpperCase() + mat_name.substring(1);
+//     def mat = material(mat_name)
+
+//     log.info(mat)
+//     log.info(mat_cap)
+//     log.info(mat.oreMultiplier())
+
+//     builder.withInput(item("gregtech:ore_" + mat_name + "_0") * 2)
+//     builder.withOutput(metaitem('crushed' + mat_cap) * (int)(mat.oreMultiplier() * 3 / 2))
+//     builder.withTurns(5)
+
+//     reg.addRecipe(builder.build())
+// }
+
 
 for (int i = 4; i < 8; i++) {
     crafting.addShaped("biomesoplenty:wood_cutting_0_" + i, item('biomesoplenty:planks_0', i - 4) * 6, [
