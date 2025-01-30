@@ -296,11 +296,7 @@ public class FirstDegreeMaterials {
                 .color(0xd2042d)
                 .build()
 
-        BoronTrioxide = new Material.Builder(8126, SuSyUtility.susyId('boron_trioxide'))
-                .dust().liquid(new FluidBuilder().temperature(723))
-                .color(0xdfcfc2)
-                .components(Boron * 2, Oxygen * 3)
-                .build()
+        // FREE ID: 8126
 
         ZincChloride = new Material.Builder(8127, SuSyUtility.susyId('zinc_chloride'))
                 .dust().liquid(new FluidBuilder().temperature(563))
@@ -427,12 +423,7 @@ public class FirstDegreeMaterials {
                 .color(0xd0cff7)
                 .build()
 
-        BoronCarbide = new Material.Builder(8148, SuSyUtility.susyId('boron_carbide'))
-                .dust()
-                .components(Boron * 4, Carbon)
-                .flags(GENERATE_ROD)
-                .colorAverage()
-                .build()
+        // FREE ID: 8148
 
         SilverChloride = new Material.Builder(8149, SuSyUtility.susyId('silver_chloride'))
                 .dust()
@@ -579,11 +570,7 @@ public class FirstDegreeMaterials {
                 .color(0x2497a6)
                 .build();
 
-        HeavyWater = new Material.Builder(8173, SuSyUtility.susyId('heavy_water'))
-                .liquid()
-                .components(Deuterium * 2, Oxygen)
-                .color(0x2c37b0)
-                .build();
+        // FREE ID: 8171
 
         HeavyHydrogenSulfide = new Material.Builder(8174, SuSyUtility.susyId('heavy_hydrogen_sulfide'))
                 .gas()
@@ -2018,11 +2005,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        HafniumTetrachloride = new Material.Builder(8397, SuSyUtility.susyId('hafnium_tetrachloride'))
-                .dust().liquid(new FluidBuilder().temperature(705))
-                .components(Hafnium, Chlorine * 4)
-                .color(0xcae3cc)
-                .build();
+        // FREE ID: 8397
 
         AmmoniumThiocyanate = new Material.Builder(8398, SuSyUtility.susyId('ammonium_thiocyanate'))
                 .dust()
@@ -2136,11 +2119,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build()
 
-        ZirconiumDioxide = new Material.Builder(8412, SuSyUtility.susyId('zirconium_dioxide'))
-                .dust()
-                .components(Zirconium, Oxygen * 2)
-                .colorAverage()
-                .build()
+        // FREE ID: 8412
 
         CopperIINitrate = new Material.Builder(8413, SuSyUtility.susyId('copper_ii_nitrate'))
                 .dust()
@@ -2952,11 +2931,7 @@ public class FirstDegreeMaterials {
 
         ZirconiumBasicSulfate.setFormula("Zr5O8(SO4)2", true)
 
-        ZirconiumTetrachloride = new Material.Builder(8544, SuSyUtility.susyId('zirconium_tetrachloride'))
-                .dust().liquid(new FluidBuilder().attribute(FluidAttributes.ACID).temperature(710))
-                .components(Zirconium, Chlorine * 4)
-                .color(0x32ad72)
-                .build();
+        // FREE ID: 8544
 
         HafniumSulfateSolution = new Material.Builder(8545, SuSyUtility.susyId('hafnium_sulfate_solution'))
                 .liquid()
@@ -2966,11 +2941,7 @@ public class FirstDegreeMaterials {
 
         HafniumSulfateSolution.setFormula("[Hf(SO4)2](H2O)2", true)
 
-        HafniumDioxide = new Material.Builder(8546, SuSyUtility.susyId('hafnium_dioxide'))
-                .dust()
-                .components(Hafnium, Oxygen * 2)
-                .colorAverage()
-                .build();
+        // FREE ID: 8546
 
         ImpureHafniumTetrachloride = new Material.Builder(8547, SuSyUtility.susyId('impure_hafnium_tetrachloride'))
                 .dust()
