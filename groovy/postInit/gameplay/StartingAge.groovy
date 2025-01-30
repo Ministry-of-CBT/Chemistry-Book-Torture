@@ -204,24 +204,6 @@ for (key in GrindstoneDepositMap) {
     reg.addRecipe(builder.build())
 }
 
-// {
-//     final IGrinderRecipeBuilder builder = reg.builder();
-//     def mat_name = 'pyrite'
-//     def mat_cap = mat_name.substring(0, 1).toUpperCase() + mat_name.substring(1);
-//     def mat = material(mat_name)
-
-//     log.info(mat)
-//     log.info(mat_cap)
-//     log.info(mat.oreMultiplier())
-
-//     builder.withInput(item("gregtech:ore_" + mat_name + "_0") * 2)
-//     builder.withOutput(metaitem('crushed' + mat_cap) * (int)(mat.oreMultiplier() * 3 / 2))
-//     builder.withTurns(5)
-
-//     reg.addRecipe(builder.build())
-// }
-
-
 for (int i = 4; i < 8; i++) {
     crafting.addShaped("biomesoplenty:wood_cutting_0_" + i, item('biomesoplenty:planks_0', i - 4) * 6, [
             [null, ore('toolSaw'), null],
