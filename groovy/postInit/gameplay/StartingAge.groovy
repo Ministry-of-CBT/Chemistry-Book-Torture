@@ -22,14 +22,6 @@ event_manager.listen { BlockEvent.HarvestDropsEvent event ->
 
 log.infoMC("Running StartingAge.groovy...")
 
-def name_removals = [
-        "biomesoplenty:mud_from_dirt"
-]
-
-for (item in name_removals) {
-    crafting.remove(item);
-}
-
 mods.jei.ingredient.yeet(
         item('minecraft:stone_sword'),
         item('minecraft:stone_shovel'),
@@ -41,15 +33,6 @@ mods.jei.ingredient.yeet(
 crafting.replaceShapeless("gregtech:clay_ball_to_dust", metaitem('dustClay'), [
         ore('craftingToolMortar'),
         ore('ingotClay')
-])
-
-crafting.addShapeless("gregtech:mud_block_to_ball", item('biomesoplenty:mudball') * 4, [
-        item('biomesoplenty:mud')
-])
-
-crafting.addShapeless("gregtech:mud_from_dirt", item('biomesoplenty:mud'), [
-        fluid('water') * 1000,
-        ore('dirt')
 ])
 
 // 8 * compressed clay
