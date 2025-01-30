@@ -366,7 +366,13 @@ public class OreMaterials{
                 .components(Titanium, Oxygen * 2)
                 .build();
 
-        // FREE ID: 7047
+        Zircon = new Material.Builder(7047, SuSyUtility.susyId('zircon')) // TODO: remove liquid for 2.8.6
+                .gem().ore().liquid().fluid(SusyFluidStorageKeys.SLURRY, new FluidBuilder()).fluid(SusyFluidStorageKeys.IMPURE_SLURRY, new FluidBuilder())
+                .iconSet(SHINY)
+                .flags(GENERATE_SIFTED, GENERATE_FLOTATED, GENERATE_CONCENTRATE)
+                .color(0xf05c51)
+                .components(Zirconium, Silicon, Oxygen * 4)
+                .build();
 
         Mimetite = new Material.Builder(7048, SuSyUtility.susyId('mimetite'))
                 .dust()

@@ -102,26 +102,6 @@ class ChangeFlags {
         Beryllium.setProperty(PropertyKey.BLAST, new BlastProperty(1560, GasTier.LOW, 120, 200, -1, -1));
         Nickel.setProperty(PropertyKey.BLAST, new BlastProperty(1728, GasTier.LOW, 120, 120, -1, -1));
 
-        //Supercrit Compat
-        Zircon.addFlags("generate_sifted", "generate_flotated", "generate_concentrate");
-        setupSlurries(Zircon);
-        //Zircon.setMaterialRGB(0xf05c51);
-		
-        //ZirconiumDioxide.setMaterialRGB(0x689F9F);
-		
-        setupFluidType(ZirconiumTetrachloride, FluidStorageKeys.LIQUID, 710);
-        ZirconiumTetrachloride.add(FluidAttributes.ACID);
-		//ZirconiumTetrachloride.setMaterialRGB(0x32ad72);
-		
-        setupFluidType(HafniumTetrachloride, FluidStorageKeys.LIQUID, 705);
-		//HafniumTetrachloride.setMaterialRGB(0xcae3cc);
-		
-        setupFluidType(BoronTrioxide, FluidStorageKeys.LIQUID, 723);
-		//BoronTrioxide.setMaterialRGB(0xdfcfc2);
-		
-		//HeavyWater.setMaterialRGB(0x2c37b0);
-		
-
         // Supercons, max amps multiplied by 4.
         ManganesePhosphide.getProperty(PropertyKey.WIRE).setAmperage(8);
         MagnesiumDiboride.getProperty(PropertyKey.WIRE).setAmperage(16);

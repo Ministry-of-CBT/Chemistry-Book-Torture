@@ -77,6 +77,7 @@ class SuSyMaterials {
         public static Material Polyhalite;
         public static Material Titanite;
         public static Material Leucoxene;
+        public static Material Zircon;
         public static Material Mimetite;
         public static Material Pyromorphite;
         public static Material Descloizite;
@@ -759,6 +760,7 @@ class SuSyMaterials {
         public static Material CarbonDisulfide;
         public static Material Cryolite;
         public static Material EthanolSolution;
+        public static Material HeavyWater;
         public static Material HeavyHydrogenSulfide;
         public static Material SemiHeavyHydrogenSulfide;
         public static Material SemiHeavyWater;
@@ -1030,6 +1032,7 @@ class SuSyMaterials {
         public static Material DecanoylChloride;
         public static Material SodiumCyanoborohydride;
         public static Material DilutedSodiumHydroxideSolution;
+        public static Material ZirconiumDioxide;
         public static Material Oleum;
         public static Material ChromiumSulfateSolution;
         public static Material Dichlorosilane;
@@ -1121,8 +1124,11 @@ class SuSyMaterials {
         public static Material ZirconylChlorideSolution;
         public static Material PurifiedZirconylChlorideSolution;
         public static Material ZirconiumBasicSulfate;
+        public static Material ZirconiumTetrachloride;
         public static Material HafniumSulfateSolution;
+        public static Material HafniumDioxide;
         public static Material ImpureHafniumTetrachloride;
+        public static Material HafniumTetrachloride;
         public static Material AmmoniumThiocyanate;
         public static Material CalciumZirconate;
         public static Material HydrogenSilsesquioxane;
