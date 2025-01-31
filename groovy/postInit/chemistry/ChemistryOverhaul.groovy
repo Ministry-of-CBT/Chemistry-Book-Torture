@@ -2782,7 +2782,7 @@ ROASTER.recipeBuilder()
         .fluidInputs(fluid('chlorine') * 8000)
         .fluidOutputs(fluid('phosphorus_trichloride') * 1000)
         .outputs(metaitem('dustPhosphorusPentachloride') * 6)
-        .duration(300)
+        .duration(150)
         .EUt(30)
         .buildAndRegister()
 
