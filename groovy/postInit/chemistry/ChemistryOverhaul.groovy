@@ -2778,11 +2778,11 @@ CSTR.recipeBuilder()
 
 // Phosphorus trichloride
 ROASTER.recipeBuilder()
-        .inputs(ore('dustAnyPurityPhosphorus') * 4)
-        .fluidInputs(fluid('chlorine') * 12000)
-        .fluidOutputs(fluid('phosphorus_trichloride') * 2000)
-        .outputs(metaitem('dustPhosphorusPentachloride') * 12)
-        .duration(300)
+        .inputs(ore('dustAnyPurityPhosphorus') * 2)
+        .fluidInputs(fluid('chlorine') * 8000)
+        .fluidOutputs(fluid('phosphorus_trichloride') * 1000)
+        .outputs(metaitem('dustPhosphorusPentachloride') * 6)
+        .duration(150)
         .EUt(30)
         .buildAndRegister()
 
