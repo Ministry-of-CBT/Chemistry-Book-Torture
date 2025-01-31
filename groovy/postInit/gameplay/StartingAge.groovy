@@ -171,7 +171,7 @@ def GrindstoneDepositMap = [
         'susy:resource_block:3': metaitem("dustSalt") * 3,
         'susy:resource_block:4': metaitem("dustSalt") * 3,
         'susy:resource_block:5': metaitem("dustSalt") * 3,
-        'susy:resource_block:15': metaitem("dustCoal") * 16,
+        'susy:resource_block:15': metaitem("dustCoal") * 12,
 ]
 
 for (mat_name in GrindstoneOreList) 
