@@ -2731,7 +2731,7 @@ public class FirstDegreeMaterials {
                 .color(0xe6c532)
                 .build();
 
-        AmmoniumHexachloroplatinate.setFormula("(NH4)2PtCl6", true)
+        AmmoniumHexachloroplatinate.setFormula("(NH4)2[PtCl6]", true)
 
         DilutedCopperSulfateSolution = new Material.Builder(8504, SuSyUtility.susyId('diluted_copper_sulfate_solution'))
                 .liquid()

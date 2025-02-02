@@ -576,6 +576,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .flags(GENERATE_CATALYST_BED)
                 .build()
+                .setFormula('(Al2O3)(PtCl4)', true)
 
         CrudeManganeseIISulfateSolution = new Material.Builder(13093, SuSyUtility.susyId('crude_manganese_ii_sulfate_solution'))
                 .liquid()
