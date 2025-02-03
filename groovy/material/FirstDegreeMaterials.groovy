@@ -231,7 +231,7 @@ public class FirstDegreeMaterials {
         PigIron.setFormula("(Fe)(?)", true)
 
         GreenCoke = new Material.Builder(8116, SuSyUtility.susyId('green_coke'))
-                .gem(1, 2000).ore(2, 1)
+                .gem(1, 2000)
                 .color(0x424a34).iconSet(LIGNITE)
                 .components(Carbon)
                 .flags(FLAMMABLE, NO_SMELTING, NO_SMASHING, MORTAR_GRINDABLE)
