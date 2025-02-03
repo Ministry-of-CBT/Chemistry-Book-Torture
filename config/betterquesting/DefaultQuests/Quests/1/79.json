@@ -12,7 +12,8 @@
         "id:8": "gregtech:meta_wire_fine"
       },
       "ismain:1": 1,
-      "name:8": "susy.quest.db.79.title"
+      "name:8": "susy.quest.db.79.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 79,
