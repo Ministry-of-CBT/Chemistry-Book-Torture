@@ -11,7 +11,8 @@
           "FluidName:8": "ortho_para_xylene_mixture"
         }
       },
-      "name:8": "susy.quest.db.873.title"
+      "name:8": "susy.quest.db.873.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 873,
