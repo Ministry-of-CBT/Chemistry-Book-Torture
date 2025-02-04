@@ -1,7 +1,7 @@
 {
   "preRequisites:11": [
-    1193199034,
-    466
+    466,
+    1177038065
   ],
   "properties:10": {
     "betterquesting:10": {
@@ -12,8 +12,7 @@
           "FluidName:8": "vacuum_oil_residue"
         }
       },
-      "name:8": "susy.quest.db.1056118460.title",
-      "tasklogic:8": "OR"
+      "name:8": "susy.quest.db.1056118460.title"
     }
   },
   "questID:3": 1056118460,
