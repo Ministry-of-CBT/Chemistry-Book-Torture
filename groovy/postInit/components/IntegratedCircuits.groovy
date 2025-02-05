@@ -75,7 +75,7 @@ Globals.solders.each { key, val ->
         CIRCUIT_ASSEMBLER.recipeBuilder()
                 .inputs(metaitem('frameAluminium'))
                 .inputs(metaitem('circuit.assembly') * 2)
-                .inputs(ore('componentDiode') * 4)
+                .inputs(metaitem('component.smd.diode') * 4)
                 .inputs(metaitem('plate.random_access_memory') * 4)
                 .inputs(metaitem('plate.central_processing_unit') * 4)
                 .inputs(ore('cableGtSingleElectrum') * 4)
