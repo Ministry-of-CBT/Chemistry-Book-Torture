@@ -2597,6 +2597,7 @@ item.chesttransporter_copper.name=Bronze Chest Transporter
 tile.pyrotech.anvil_granite.name=Stone Anvil
 gui.pyrotech.jei.category.anvil.granite=Stone Anvil
 gregtech.universal.tooltip.terrain_resist=§eWill not explode from water, lava, fire or rain.
+gregtech.advancement.steam.14_magnetic_iron.desc=Craft a Magnetic Iron Rod
 
 # Material Renaming
 item.susy.material.ultra_high_molecular_weight_polyethylene.dustTiny=Tiny Pile of Ultra High Molecular Weight Polyethylene (UHMWPE) Pulp
