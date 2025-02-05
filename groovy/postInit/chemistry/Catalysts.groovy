@@ -472,3 +472,33 @@ ROASTER.recipeBuilder()
         .duration(400)
         .EUt(120)
         .buildAndRegister();
+
+// Methanol catalyst
+
+BR.recipeBuilder()
+	.inputs(ore('dustZincChloride') * 3)
+	.fluidInputs(fluid('soda_ash_solution') * 1000)
+	.outputs(ore('dustZincCarbonate') * 5)
+	.fluidOutputs(fluid('concentrated_salt_water') * 1000)
+	.duration(100)
+	.EUt(120)
+	.buildAndRegister();
+
+BR.recipeBuilder()
+	.inputs(ore('dustCopperIiChloride') * 3)
+	.fluidInputs(fluid('soda_ash_solution') * 1000)
+	.outputs(ore('dustCopperCarbonate') * 5)
+	.fluidOutputs(fluid('concentrated_salt_water') * 1000)
+	.duration(100)
+	.EUt(120)
+	.buildAndRegister();
+
+
+ROASTER.recipeBuilder()
+    .inputs(ore('dustCopperCarbonate') * 10)
+    .inputs(ore('dustZincCarbonate') * 5)
+    .inputs(ore('dustChromiumTrioxide') * 4)
+    .outputs(metaitem('dustCopperZincChromiumOxide'))
+    .duration(40)
+    .EUt(40)
+    .buildAndRegister()

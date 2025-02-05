@@ -3604,5 +3604,17 @@ public class FirstDegreeMaterials {
                 .components(LithiumNitrate * 2, Water * 1)
                 .colorAverage()
                 .build()
+
+        ZincCarbonate = new Material.Builder(8641, SuSyUtility.susyId("zinc_carbonate"))
+                .dust()
+                .components(Zinc, Carbon, Oxygen * 3)
+                .colorAverage()
+                .build();
+
+        CopperCarbonate = new Material.Builder(8642, SuSyUtility.susyId("copper_carbonate"))
+                .dust()
+                .components(Copper, Carbon, Oxygen * 3)
+                .colorAverage()
+                .build();
     }
 }
