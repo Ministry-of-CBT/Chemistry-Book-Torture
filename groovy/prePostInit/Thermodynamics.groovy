@@ -142,7 +142,7 @@ CryoXenon.setDurationRadiator(200);
 CryoXenon.setTemperature(165);
 
 def CryoAir = new ICryoGas('air', 'hot_hp_air', 'hp_air', 'cold_hp_air', 'liquid_air');
-CryoAir.setEUt(60);
+CryoAir.setEUt(30);
 CryoAir.setDuration(100);
 CryoAir.setPowerHX(100);
 CryoAir.setDurationHX(5);
