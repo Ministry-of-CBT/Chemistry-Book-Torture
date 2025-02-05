@@ -457,7 +457,7 @@ ROASTER.recipeBuilder()
     ROASTER.recipeBuilder()
         .fluidInputs(fluid('ltft_catalyst_solution') * 1000)
         .outputs(metaitem('dustLtftCatalyst'))
-        .fluidOutputs(fluid('steam') * 1000)
+        .fluidOutputs(fluid('dense_steam') * 1000)
         .duration(100)
         .EUt(120)
         .buildAndRegister();
