@@ -1174,12 +1174,12 @@ CENTRIFUGE.recipeBuilder()
         .EUt(30)
         .buildAndRegister();
 
-CENTRIFUGE.recipeBuilder()
+/*CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustGreenCoke')) //I assume this is https://en.wikipedia.org/wiki/Petroleum_coke?
         .chancedOutput(metaitem('dustCarbon'), 8500, 0)
         .duration(80)
         .EUt(30)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
 CENTRIFUGE.recipeBuilder()
         .inputs(ore('dustCoal'))
