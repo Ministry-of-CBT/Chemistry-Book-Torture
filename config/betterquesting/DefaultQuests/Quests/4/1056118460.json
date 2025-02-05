@@ -12,7 +12,8 @@
           "FluidName:8": "vacuum_oil_residue"
         }
       },
-      "name:8": "susy.quest.db.1056118460.title"
+      "name:8": "susy.quest.db.1056118460.title",
+      "tasklogic:8": "OR"
     }
   },
   "questID:3": 1056118460,
