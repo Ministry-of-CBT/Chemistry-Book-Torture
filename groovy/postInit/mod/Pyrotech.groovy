@@ -1282,15 +1282,15 @@ def alloy_add = {String outputAlloy, int outputAmount, int recipeDuration, Array
 // Smelter alloying recipes
 alloying_recipes = [
         // Bronze
-        ["Bronze", 4, 600, ["Copper", 3, "Tin", 1]],
+        ["Bronze", 4, 200, ["Copper", 3, "Tin", 1]],
         // Brass
-        ["Brass", 4, 600, ["Copper", 3, "Zinc", 1]],
+        ["Brass", 4, 200, ["Copper", 3, "Zinc", 1]],
         // SnFe
-        ["TinAlloy", 2, 300, ["Iron", 1, "Tin", 1]],
+        ["TinAlloy", 2, 100, ["Iron", 1, "Tin", 1]],
         // Potin
-        ["Potin", 9, 1350, ["Bronze", 8, "Lead", 1]],
+        ["Potin", 9, 450, ["Bronze", 8, "Lead", 1]],
         // Kovar
-        ["Kovar", 2, 300, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
+        ["Kovar", 2, 100, ["Iron", 2, "Nickel", 1, "CobaltMatte", 1]]
 ]
 
 alloying_recipes.forEach { recipe ->
