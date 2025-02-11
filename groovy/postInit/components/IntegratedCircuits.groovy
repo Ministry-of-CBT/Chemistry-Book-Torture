@@ -45,7 +45,7 @@ mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plas
 mods.gregtech.circuit_assembler.removeByInput(120, [metaitem('circuit_board.plastic'), metaitem('circuit.assembly') * 2, metaitem('component.diode') * 4, metaitem('plate.random_access_memory') * 4, metaitem('wireFineElectrum') * 16, metaitem('boltBlueAlloy') * 16], [fluid('tin') * 288])
 
 Globals.solders.each { key, val ->
-       CIRCUIT_ASSEMBLERrecipeBuilder()
+       CIRCUIT_ASSEMBLER.recipeBuilder()
                 .inputs(metaitem('circuit_board.good'))
                 .inputs(metaitem('plate.integrated_logic_circuit'))
                 .inputs(ore('boltRedAlloy') * 2)
