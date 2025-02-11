@@ -788,7 +788,7 @@ for (WorkingFluid in WorkingFluids) {
             .fluidInputs(liquid('flue_gas') * 8000)
             .fluidOutputs(liquid(WorkingFluid.heated_fluid) * (WorkingFluid.amount_to_use * WorkingFluid.conversion_factor * 16))
             .fluidOutputs(liquid('chilled_flue_gas') * 8000)
-            .duration((int) (WorkingFluid.duration) * 16)
+            .duration((int) (WorkingFluid.duration))
             .buildAndRegister();
 
 
