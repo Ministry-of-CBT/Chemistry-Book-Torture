@@ -1,13 +1,13 @@
 name = "Flare"
-filename = "flare-0.3.0.jar"
+filename = "flare-0.4.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "14a37a607e55c43e654cb9ff883daf1ec969aced"
+hash = "86561afada63714d0f111bc55485617598e9e5a1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6162184
+file-id = 6183658
 project-id = 692142
