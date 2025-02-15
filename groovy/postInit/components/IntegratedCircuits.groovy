@@ -141,7 +141,7 @@ Globals.solders.each { key, val ->
                 .outputs(metaitem('circuit.workstation'))
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(400)
-                .EUt(480)
+                .EUt(120)
                 .buildAndRegister();
 
         CIRCUIT_ASSEMBLER.recipeBuilder()
