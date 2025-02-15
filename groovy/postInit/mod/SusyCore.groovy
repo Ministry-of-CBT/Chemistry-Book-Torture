@@ -1,6 +1,7 @@
 import globals.Globals
 import globals.RecyclingHelper
 import gregtech.api.recipes.ingredients.nbtmatch.*
+
 ASSEMBLER = recipemap('assembler')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 CVD = recipemap('cvd')
