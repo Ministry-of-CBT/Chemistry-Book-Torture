@@ -25,49 +25,16 @@ SIEVE_DT = recipemap('sieve_distillation')
 PHASE_SEPARATOR = recipemap('phase_separator')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 
-//MODERN SEPARATION PROCESSES
-GRAVITY_SEPARATOR.recipeBuilder() 
-        .inputs(ore('dustPentlandite'))
-        .outputs(metaitem('dustSiftedPentlandite'))
-        .chancedOutput(metaitem('dustUltramaficTailings'), 2500, 0)
-        .EUt(Globals.voltAmps[1])
-        .duration(40)
-        .buildAndRegister()
-
-MIXER.recipeBuilder()
-        .inputs(ore('dustSiftedPentlandite') * 8)
-        .fluidInputs(fluid('distilled_water') * 2000)
-        .fluidOutputs(fluid('impure_pentlandite_slurry') * 2000)
-        .EUt(Globals.voltAmps[3])
-        .duration(80)
-        .buildAndRegister()
-
-FF.recipeBuilder()
-        .fluidInputs(fluid('impure_pentlandite_slurry') * 2000)
-        .notConsumable(fluid('sodium_isobutyl_xanthate') * 100)
-        .notConsumable(fluid('copper_sulfate_solution') * 100)
-        .notConsumable(fluid('cresol') * 100)
-        .fluidOutputs(fluid('pentlandite_slurry') * 1000)
-        .fluidOutputs(fluid('ultramafic_tailing_slurry') * 1000)
-        .EUt(Globals.voltAmps[3])
-        .duration(80)
-        .buildAndRegister()
-
-CLARIFIER.recipeBuilder()
-        .fluidInputs(fluid('pentlandite_slurry') * 1000)
-        .outputs(metaitem('dustFlotatedPentlandite') * 16)
-        .fluidOutputs(fluid('wastewater') * 1000)
-        .duration(20)
-        .EUt(Globals.voltAmps[1])
-        .buildAndRegister()
-
 //The pelletized material is smelted in a shaft furnace to form a 
 //copper – nickel matte. Oxygen is then blown into the converter
 //to oxidize the iron sulfide selectively to iron oxide, 
 //which forms a slag.
+
 EBF.recipeBuilder()
+        .circuitMeta(2)
         .inputs(ore('dustFlotatedPentlandite') * 8)
         .outputs(metaitem('dustGreenMatte') * 8)
+        .outputs(metaitem('dustGraniteTailings'))
         .duration(20)
         .blastFurnaceTemp(2700)
         .EUt(Globals.voltAmps[2])
@@ -334,25 +301,3 @@ CENTRIFUGE.recipeBuilder()
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
-
-
-// Possible improvements for Pre-PGM Proc: 
-
-// method described in original paper (renner 2001)
-
-// ELECTROMAGNETIC_SEPARATOR.recipeBuilder()
-//         .inputs(ore('dustWhiteMatte'))
-//         .outputs(metaitem('pgm_RichMatte'))
-//         .outputs(metaitem('pgm_FreeMatte'))
-//         .duration(20)
-//         .EUt(Globals.voltAmps[2])
-//         .buildAndRegister()
-
-// AUTOCLAVE.recipeBuilder()
-//         .inputs(ore('pgm_RichMatte'))
-//         .fluidInputs(fluid('oxygen'))
-//         .fluidInputs(fluid('sulfuric_acid'))
-//         .outputs(fluid('dustPgm_concentrate'))
-//         .fluidOutputs(fluid(''))
-//         .duration(200)
-//         .EUt(Globals.voltAmps[2])
