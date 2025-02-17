@@ -85,7 +85,7 @@ class ChangeFlags {
         setupFluidType(Iodine, FluidStorageKeys.GAS, 460)
         setupFluidType(Chlorine, FluidStorageKeys.PLASMA)
         setupFluidType(Selenium, FluidStorageKeys.LIQUID, 494)
-        setupFluidType(OsmiumTetroxide, FluidStorageKeys.LIQUID, 404)
+        setupFluidType(OsmiumTetroxide, FluidStorageKeys.GAS, 404)
         OsmiumTetroxide.addFlags("NO_UNIFICATION")
         //setupFluidType(Iron3Chloride, FluidStorageKeys.GAS, 590) 
 

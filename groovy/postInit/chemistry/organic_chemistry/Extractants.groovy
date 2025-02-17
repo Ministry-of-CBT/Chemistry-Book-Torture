@@ -488,6 +488,8 @@ BR.recipeBuilder()
         .EUt(120)
         .buildAndRegister()
 
+
+
 //D2EHPA
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
@@ -827,4 +829,12 @@ CHEMICAL_BATH.recipeBuilder()
         .outputs(metaitem('beads.rhenium_ion_exchange'))
         .EUt(120)
         .duration(200)
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('hydrogen_peroxide') * 1000)
+        .fluidOutputs(fluid('hydrogen_peroxide_solution') * 1000)
+        .EUt(7)
+        .duration(40)
         .buildAndRegister()

@@ -736,7 +736,7 @@ public class FirstDegreeMaterials {
         HexachloroiridicAcid = new Material.Builder(8197, SuSyUtility.susyId('hexachloroiridic_acid'))
                 .dust()
                 .iconSet(SHINY)
-                .components(Chlorine * 6, Hydrogen * 2, Iridium)
+                .components(Hydrogen * 2, Iridium, Chlorine * 6)
                 .colorAverage()
                 .build()
 
@@ -1453,7 +1453,7 @@ public class FirstDegreeMaterials {
         IronSulfate = new Material.Builder(8310, SuSyUtility.susyId('iron_sulfate'))
                 .dust()
                 .components(Iron, Sulfur, Oxygen * 4)
-                .colorAverage()
+                .color(0x42f578)
                 .build();
 
         RoastedPetalite = new Material.Builder(8311, SuSyUtility.susyId('roasted_petalite'))
@@ -1776,6 +1776,7 @@ public class FirstDegreeMaterials {
                 .components(Antimony * 2, Oxygen * 5)
                 .colorAverage()
                 .build();
+
 
         ImpureCobaltOxide = new Material.Builder(8360, SuSyUtility.susyId('impure_cobalt_oxide'))
                 .dust()
@@ -3597,12 +3598,6 @@ public class FirstDegreeMaterials {
                 .color(0xbb7694)
                 .build()
 
-        CobaltSulfateSolution = new Material.Builder(8637, SuSyUtility.susyId('cobalt_sulfate_solution'))
-                .liquid()
-                .components(CobaltSulfate * 1, Water * 1)
-                .colorAverage()
-                .build()
-
         // 8638: Co3O4
 
         LithiumNitrate = new Material.Builder(8639, SuSyUtility.susyId('lithium_nitrate'))
@@ -3628,5 +3623,46 @@ public class FirstDegreeMaterials {
                 .components(Copper, Carbon, Oxygen * 3)
                 .colorAverage()
                 .build();
+
+        SeleniumDioxide = new Material.Builder(8643, SuSyUtility.susyId("selenium_dioxide"))
+                .dust()
+                .components(Selenium * 1, Oxygen * 2)
+                .colorAverage()
+                .build();
+
+        DilutePotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('dilute_potassium_acetate_solution'))
+                .dust()
+                .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
+                .colorAverage()
+                .build();
+
+        DilutePotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
+
+        // FREE IDs: 8645-8649
+
+        AmmoniumHexachlororhodate = new Material.Builder(8650, SuSyUtility.susyId('ammonium_hexachlororhodate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Rhodium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororhodate.setFormula('(NH4)3(RhCl6)', true);
+
+        AmmoniumHexachloroiridate = new Material.Builder(8651, SuSyUtility.susyId('ammonium_hexachloroiridate'))
+                .dust()
+                .components(Nitrogen * 3, Hydrogen * 12, Iridium * 1, Chlorine * 6)
+                .colorAverage()
+                .build();
+        
+        AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
+
+        PotassiumAcetateSolution = new Material.Builder(8652, SuSyUtility.susyId('potassium_acetate_solution'))
+                .dust()
+                .components(Potassium, Carbon * 2, Hydrogen * 3, Oxygen * 2, Water * 2)
+                .colorAverage()
+                .build();
+
+        PotassiumAcetateSolution.setFormula("(CH3COOK)(H2O)", true)
+
     }
 }

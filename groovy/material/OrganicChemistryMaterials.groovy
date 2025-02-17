@@ -249,13 +249,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        TrimethylBorate = new Material.Builder(15038, SuSyUtility.susyId('trimethyl_borate'))
-                .liquid()
-                .components(Boron, Carbon * 3, Oxygen * 3, Hydrogen * 9)
-                .colorAverage()
+        Diisobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
+                .fluid()
+                .components(Carbon * 8, Hydrogen * 16)
+                .color(0xa79781)
                 .build();
-
-        TrimethylBorate.setFormula("B(OCH3)3", true)
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -2675,5 +2673,14 @@ public class OrganicChemistryMaterials {
                 .components(Carbon * 12, Hydrogen * 24)
                 .color(0xb9ac9a)
                 .build();
+
+        CobaltExtractionMixture = new Material.Builder(15425, SuSyUtility.susyId("cobalt_extraction_mixture"))
+                .fluid()
+                .components(TrimethylpentylphosphinicAcid * 1, OrthoXylene * 1)
+                .colorAverage()
+                .build();
+
+        CobaltExtractionMixture.setFormula("(C8H10)(C16H35O2P)", true)
+
     }
 }

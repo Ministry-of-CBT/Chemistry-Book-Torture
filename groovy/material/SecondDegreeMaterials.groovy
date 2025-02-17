@@ -775,12 +775,66 @@ public class SecondDegreeMaterials {
 
         TetraamminepalladiumDichloride.setFormula("[Pd(NH3)4]Cl2", true)
 
-        PotassiumPersulfateSolution = new Material.Builder(13122, SuSyUtility.susyId('potassium_persulfate_solution'))
+        // FREE ID: 13122-13129
+
+        HexachloroiridicAcidSolution = new Material.Builder(13130, SuSyUtility.susyId('hexachloroiridic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(HexachloroiridicAcid * 1, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororhodicAcidSolution = new Material.Builder(13131, SuSyUtility.susyId('hexachlororhodic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 3, Rhodium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororuthenicAcidSolution = new Material.Builder(13132, SuSyUtility.susyId('hexachlororuthenic_acid_solution'))
+                .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
+                .components(Hydrogen * 2, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        HexachlororuthenicAcidSolution.setFormula('(H2RuCl6)2(H2O)35', true)
+
+        AmmoniumHexachlororuthenateSolution = new Material.Builder(13133, SuSyUtility.susyId('ammonium_hexachlororuthenate_solution'))
+                .liquid(new FluidBuilder())
+                .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
+
+        AmmoniumHexachlororuthenateSolution.setFormula('((NH4)2[RuCl6])2(H2O)35', true)
+
+        TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
+                .liquid()
+                .components(Ammonia * 4, Palladium * 1, Chlorine * 2, Water * 1)
+                .colorAverage()
+                .build();
+        
+        TetraamminepalladiumDichloride.setFormula('Pd(NH3)4Cl2(H2O)', true)
+
+        PotassiumPersulfateSolution = new Material.Builder(13135, SuSyUtility.susyId('potassium_persulfate_solution'))
                 .fluid()
                 .components(PotassiumPersulfate * 1, Water * 1)
                 .colorAverage()
                 .build();
 
         PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
+
+        PotassiumOsmateSolution = new Material.Builder(13136, SuSyUtility.susyId('potassium_osmate_solution'))
+                .fluid()
+                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
+                .color(0xbf21a0)
+                .build();
+
+        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
+
+        CobaltSulfateSolution = new Material.Builder(13137, SuSyUtility.susyId("cobalt_sulfate_solution"))
+                .fluid()
+                .components(Cobalt * 1, Sulfur * 1, Oxygen * 4, Water * 1)
+                .colorAverage()
+                .build();
+
+        CobaltSulfateSolution.setFormula("(CoSO4)(H2O)", true)
     }
 }
