@@ -15,17 +15,37 @@
         "Damage:2": 989,
         "id:8": "gregtech:machine"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.550.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.550.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 550,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 47,
+            "TrophyColorGreen:3": 47,
+            "TrophyColorRed:3": 48,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 989,
+              "id:8": "gregtech:machine"
+            },
+            "TrophyName:8": "I Have Become Death",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "neon"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

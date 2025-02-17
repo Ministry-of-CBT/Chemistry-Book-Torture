@@ -15,13 +15,35 @@
         "Damage:2": 3003,
         "id:8": "gregtech:meta_ingot"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.813.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.813.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 813,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 55,
+            "TrophyColorGreen:3": 58,
+            "TrophyColorRed:3": 123,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 8630,
+              "id:8": "gregtech:meta_ingot"
+            },
+            "TrophyName:8": "When Everyone Is Super",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"

@@ -5,21 +5,40 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.193.desc",
-      "frame:8": "ROUNDED_SQUARE",
       "icon:10": {
         "Damage:2": 6,
         "id:8": "openmodularturrets:intermediate_tiered"
       },
-      "ignoresview:1": 0,
-      "name:8": "susy.quest.db.193.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.193.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 193,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 35,
+            "TrophyColorGreen:3": 38,
+            "TrophyColorRed:3": 104,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "Damage:2": 6,
+              "id:8": "openmodularturrets:intermediate_tiered"
+            },
+            "TrophyName:8": "The Beginning of the End",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,

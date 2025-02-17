@@ -5,7 +5,7 @@
   "properties:10": {
     "betterquesting:10": {
       "desc:8": "susy.quest.db.9.desc",
-      "frame:8": "ROUNDED_SQUARE",
+      "frame:8": "GATE",
       "icon:10": {
         "id:8": "gregtech:pickaxe",
         "tag:10": {
@@ -19,25 +19,21 @@
             "Durability:3": 0,
             "HarvestLevel:3": 1,
             "Material:8": "gregtech:flint",
-            "MaxDurability:3": 31,
+            "MaxDurability:3": 63,
             "ToolSpeed:5": 4.0
           },
           "HideFlags:3": 2
         }
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
       "name:8": "susy.quest.db.9.title",
-      "tasklogic:8": "OR",
-      "visibility:8": "ALWAYS"
+      "tasklogic:8": "OR"
     }
   },
-  "rewards:9": {},
+  "questID:3": 9,
   "tasks:9": {
     "0:10": {
-      "entryLogic:8": "AND",
       "index:3": 2,
-      "partialMatch:1": 1,
       "requiredItems:9": {
         "0:10": {
           "Count:3": 1,
@@ -54,7 +50,7 @@
               "Durability:3": 0,
               "HarvestLevel:3": 1,
               "Material:8": "gregtech:flint",
-              "MaxDurability:3": 95,
+              "MaxDurability:3": 127,
               "ToolSpeed:5": 2.0
             },
             "HideFlags:3": 2
@@ -72,7 +68,7 @@
               "Durability:3": 0,
               "HarvestLevel:3": 1,
               "Material:8": "gregtech:flint",
-              "MaxDurability:3": 95
+              "MaxDurability:3": 127
             },
             "HideFlags:3": 2
           }
@@ -88,7 +84,7 @@
               "AttackSpeed:5": 3.0,
               "Durability:3": 0,
               "Material:8": "gregtech:flint",
-              "MaxDurability:3": 95
+              "MaxDurability:3": 127
             },
             "HideFlags:3": 2
           }

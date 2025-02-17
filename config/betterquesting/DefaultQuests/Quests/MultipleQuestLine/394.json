@@ -12,13 +12,34 @@
       "icon:10": {
         "id:8": "susy:turbine_rotor"
       },
-      "ignoresview:1": 0,
       "ismain:1": 1,
-      "name:8": "susy.quest.db.394.title",
-      "visibility:8": "ALWAYS"
+      "name:8": "susy.quest.db.394.title"
     }
   },
-  "rewards:9": {},
+  "questID:3": 394,
+  "rewards:9": {
+    "0:10": {
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 1,
+          "id:8": "simple_trophies:trophy",
+          "tag:10": {
+            "TrophyColorBlue:3": 128,
+            "TrophyColorGreen:3": 57,
+            "TrophyColorRed:3": 95,
+            "TrophyItem:10": {
+              "Count:3": 1,
+              "id:8": "susy:turbine_rotor"
+            },
+            "TrophyName:8": "It's All Coming Together",
+            "TrophyShowsTooltip:1": 1,
+            "TrophyVariant:8": "classic"
+          }
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "taskID:8": "bq_standard:checkbox"
