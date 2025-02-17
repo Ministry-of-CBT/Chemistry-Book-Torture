@@ -163,7 +163,7 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        //Colors
+        // Colors
 
         Phosphorus.setMaterialRGB(0xfffed6);
 
@@ -183,6 +183,7 @@ class ChangeFlags {
 
         // Ore Processing
         
+        Pitchblende.addFlags("disable_decomposition")
         Borax.setProperty(PropertyKey.ORE, new OreProperty());
         Scheelite.addFlags("generate_sifted", "generate_flotated");
 		setupSlurries(Scheelite)
