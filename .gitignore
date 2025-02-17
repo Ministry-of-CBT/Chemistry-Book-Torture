@@ -8,6 +8,7 @@ fonts/
 journeymap/
 logs/
 saves/
+mods/*.jar
 
 .curseclient
 usercache.json
@@ -93,3 +94,5 @@ visualores/
 
 *__pycache__*
 servers.dat
+index.toml
+pack.toml
