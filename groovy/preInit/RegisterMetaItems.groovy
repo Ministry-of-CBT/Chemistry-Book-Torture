@@ -107,9 +107,10 @@ eventManager.listen {
         customMetaItems.addItem(214, "epoxy_lamina")
 
         customMetaItems.addItem(250, "beads.amberlyst_ch");
-        customMetaItems.addItem(251, "beads.ag_fifty_w_x_eight");
-        customMetaItems.addItem(252, "beads.rhenium_ion_exchange")
-        customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange")
+        customMetaItems.addItem(251, "beads.strong_acidic_cation_exchange_resin");
+        customMetaItems.addItem(252, "beads.weak_basic_anion_exchange_resin");
+        customMetaItems.addItem(253, "beads.loaded_rhenium_ion_exchange");
+        customMetaItems.addItem(254, "beads.strong_basic_anion_exchange_resin");
 
         customMetaItems.addItem(300, "mylar")
         customMetaItems.addItem(301, "spinneret")
