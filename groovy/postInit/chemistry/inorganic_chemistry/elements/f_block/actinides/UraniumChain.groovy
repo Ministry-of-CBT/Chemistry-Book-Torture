@@ -167,7 +167,7 @@ MIXER.recipeBuilder()
         .buildAndRegister()
 
     BR.recipeBuilder()
-        .inputs(metaitem('beads.loaded_uranium_ion_exchange'))
+        .inputs(metaitem('beads.loaded_uranium_anion_exchange'))
         .fluidInputs(fluid('sodium_sulfate_solution') * 1000)
         .outputs(metaitem('beads.strong_basic_anion_exchange_resin'))
         .fluidOutputs(fluid('uranyl_sulfate_solution') * 1000)
