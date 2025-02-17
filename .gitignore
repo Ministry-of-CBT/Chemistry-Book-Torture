@@ -97,3 +97,4 @@ visualores/
 .idea/discord.xml
 .idea/workspace.xml
 servers.dat
+mods/*.jar
