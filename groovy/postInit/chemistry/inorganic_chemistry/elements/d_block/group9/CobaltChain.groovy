@@ -14,7 +14,6 @@ ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
 //COBALTITE MODIFICATION
 mods.gregtech.electric_blast_furnace.removeByInput(120, [metaitem('dustCobaltite')], [fluid('oxygen') * 3000])
 
-
 EBF.recipeBuilder()
         .inputs(ore('dustCobaltite') * 2)
         .fluidInputs(fluid('oxygen') * 9000)

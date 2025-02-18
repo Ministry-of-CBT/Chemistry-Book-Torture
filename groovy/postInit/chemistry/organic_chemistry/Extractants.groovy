@@ -660,6 +660,95 @@ LCR.recipeBuilder()
         .EUt(480)
         .buildAndRegister()
 
+//cyanex production
+
+BR.recipeBuilder()
+        .inputs(ore('dustSodiumHypophosphite') * 3)
+        .fluidInputs(fluid('acetic_acid') * 1000)
+        .fluidOutputs(fluid('sodium_hypophosphite_solution') * 1000) //material
+        .duration(20)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+//diisobutylene production
+// https://patents.google.com/patent/US7414164B2/en
+// mostly from this patent: https://patents.google.com/patent/US5877372A/en
+BR.recipeBuilder()
+        //.notConsumable(ore('dustAluminiumSilicate'))
+        .notConsumable(metaitem('beads.ag_fifty_w_x_eight')) 
+        //dry sulfonic acid ion exchange resin like Amberlyst 15 or zeolite-based catalysts
+        .notConsumable(fluid('tert_butyl_alcohol') * 100) //1 to 30 wt %
+        .notConsumable(fluid('isooctane') * 100) //diluent, 90% isooctane and 10% isododecane/2,2,4,4,6 pentamethyl heptane
+        .fluidInputs(fluid('isobutylene') * 1000)
+        .fluidOutputs(fluid('diisobutylene_mixture') * 1000)
+        .duration(200)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+DISTILLATION_TOWER.recipeBuilder() //90% yield converted to diisobutytlene?
+        .fluidInputs(fluid('diisobutylene_mixture') * 1000)
+        .fluidOutputs(fluid('isobutylene') * 90)
+        .fluidOutputs(fluid('diisobutylene') * 400)
+        .fluidOutputs(fluid('triisobutylene') * 20)
+//        ↓ this is not doable currently due to DT input restrictions
+//        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        .duration(800)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+//source for trimethylpentylphosphinic acid WO2013083047A1
+BR.recipeBuilder()
+        .notConsumable(metaitem('emitter.lv'))
+        .fluidInputs(fluid('sodium_hypophosphite_solution') * 1000)
+        .fluidInputs(fluid('acetone') * 100)
+        .fluidInputs(fluid('diisobutylene') * 500) //material
+        .fluidOutputs(fluid('crude_trimethylpentylphosphinic_acid') * 1000) //material
+        .duration(100)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister();
+
+
+CENTRIFUGE.recipeBuilder()
+        .fluidInputs(fluid('crude_trimethylpentylphosphinic_acid') * 1000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('alkaline_trimethylpentylphosphinic_acid') * 1000) //material
+        .fluidOutputs(fluid('diluted_sodium_hydroxide_solution') * 1000)
+        .duration(100)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister();
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('alkaline_trimethylpentylphosphinic_acid') * 1000)
+        .fluidInputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('acidified_trimethylpentylphosphinic_acid') * 1000) //material
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 1000) 
+        .duration(100)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister();
+
+DRYER.recipeBuilder()
+        .fluidInputs(fluid('acidified_trimethylpentylphosphinic_acid') * 1000)
+        .fluidOutputs(fluid('dehydrated_trimethylpentylphosphinic_acid') * 1000) //material
+        .EUt(Globals.voltAmps[2])
+        .duration(600)
+        .buildAndRegister()
+
+VACUUM_DT.recipeBuilder()
+        .fluidInputs(fluid('dehydrated_trimethylpentylphosphinic_acid') * 1000)
+        .fluidOutputs(fluid('trimethylpentylphosphinic_acid') * 1000) //new material
+        .duration(120)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('trimethylpentylphosphinic_acid') * 1000)
+        .fluidInputs(fluid('ortho_xylene') * 1000)
+        .fluidOutputs(fluid('cobalt_extraction_mixture') * 1000)
+        .duration(120)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+//end cyanex chain
+
 //ION EXCHANGE RESINS
 //AG 50W-X8
 POLYMERIZATION.recipeBuilder()
