@@ -1085,7 +1085,7 @@ public class UnknownCompositionMaterials {
                 .color(0x696840)
                 .build();
 
-        UraniumVanadiumExtractionMixture = new Material.Builder(4210, SuSyUtility.susyId('uranium_vanadium_extraction_mixture'))
+        UraniumExtractionMixture = new Material.Builder(4210, SuSyUtility.susyId('uranium_extraction_mixture'))
                 .liquid()
                 .color(0xd4d03f)
                 .build();
@@ -1181,7 +1181,22 @@ public class UnknownCompositionMaterials {
                 .flags(GENERATE_CATALYST_BED)
                 .build();
 
-        //FREE IDs: 4228-4231
+        CrudeCarnotiteLeach = new Material.Builder(4228, SuSyUtility.susyId('crude_carnotite_leach'))
+                .liquid()
+                .color(0x697043)
+                .build();
+
+        CrudePitchblendeLeach = new Material.Builder(4229, SuSyUtility.susyId('crude_pitchblende_leach'))
+                .liquid()
+                .color(0x1d1f15)
+                .build();
+
+        PitchblendeLeach = new Material.Builder(4230, SuSyUtility.susyId('pitchblende_leach'))
+                .liquid()
+                .color(0x2a2e1c)
+                .build();
+
+        //FREE ID: 4231
 
         TitanylSulfateSolution = new Material.Builder(4232, SuSyUtility.susyId('titanyl_sulfate_solution'))
                 .liquid()

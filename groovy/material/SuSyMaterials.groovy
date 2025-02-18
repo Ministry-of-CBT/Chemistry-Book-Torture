@@ -336,9 +336,12 @@ class SuSyMaterials {
         public static Material TitaniaSlag;
         public static Material TitanylSulfateSolution;
         public static Material RutileSlurry;
+        public static Material CrudeCarnotiteLeach;
         public static Material CarnotiteLeach;
         public static Material ReducedCarnotiteLeach;
-        public static Material UraniumVanadiumExtractionMixture;
+        public static Material CrudePitchblendeLeach;
+        public static Material PitchblendeLeach;
+        public static Material UraniumExtractionMixture;
         public static Material UraniumVanadiumExtract;
         public static Material UraniumExtract;
         public static Material AcidicVanadylSolution;

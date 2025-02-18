@@ -1330,7 +1330,7 @@ susy.material.alkali_vt_slag=Щелочной ванадий-титановый 
 susy.material.titania_slag=Титановый шлак
 susy.material.carnotite_leach=Карнотитовый выщелачиватель
 susy.material.reduced_carnotite_leach=Уменьшенное выщелачивание карнотита
-susy.material.uranium_vanadium_extraction_mixture=Экстракционная смесь урана и ванадия
+susy.material.uranium_extraction_mixture=Экстракционная смесь урана
 susy.material.uranium_vanadium_extract=Уран-ванадиевый экстракт
 susy.material.uranium_extract=Экстракт урана
 susy.material.acidic_vanadyl_solution=Кислый раствор ванадила
@@ -2499,10 +2499,11 @@ metaitem.chip.insulated_silicon_germanium.name=Изолированный кре
 metaitem.chip.n_doped_silicon.name=Чип из n-легированного кремния
 metaitem.chip.silicon_dioxide.name=Чип из диоксида кремния
 
-metaitem.beads.ag_fifty_w_x_eight.name=Смоляные шарики AG 50W-X8
-metaitem.beads.amberlyst_ch.name=Бусины Amberlyst CH-43
-metaitem.beads.rhenium_ion_exchange.name=Рениевые ионообменные гранулы
+metaitem.beads.strong_acidic_cation_exchange.name=Сильные кислотные катионные ионообменные гранулы
+metaitem.beads.amberlyst_ch.name=Amberlyst CH-43 Beads
 metaitem.beads.loaded_rhenium_ion_exchange.name=Нагруженные рениевые ионообменные гранулы
+metaitem.beads.weak_basic_cation_exchange.name=Слабые основные катионные ионообменные гранулы
+metaitem.beads.strong_basic_cation_exchange.name=Сильные основные катионные ионообменные гранулы
 
 metaitem.fused_quartz.name=Пластина из плавленого кварца
 metaitem.crucible.quartz.name=Кварцевый тигель

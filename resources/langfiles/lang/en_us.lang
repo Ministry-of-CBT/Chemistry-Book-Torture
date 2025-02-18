@@ -1330,9 +1330,12 @@ susy.material.silicon_dioxide_slurry=Silicon Dioxide Slurry
 susy.material.vt_slag=Vanadium-Titania Slag
 susy.material.alkali_vt_slag=Alkaline Vanadium-Titania Slag
 susy.material.titania_slag=Titania Slag
+susy.material.crude_carnotite_leach=Crude Carnotite Leach
 susy.material.carnotite_leach=Carnotite Leach
 susy.material.reduced_carnotite_leach=Reduced Carnotite Leach
-susy.material.uranium_vanadium_extraction_mixture=Uranium-Vanadium Extraction Mixture
+susy.material.crude_pitchblende_leach=Crude Pitchblende Leach
+susy.material.pitchblende_leach=Pitchblende Leach
+susy.material.uranium_extraction_mixture=Uranium Extraction Mixture
 susy.material.uranium_vanadium_extract=Uranium-Vanadium Extract
 susy.material.uranium_extract=Uranium Extract
 susy.material.acidic_vanadyl_solution=Acidic Vanadyl Solution
@@ -2566,10 +2569,11 @@ metaitem.chip.insulated_silicon_germanium.name=Insulated Silicon-Germanium Chip
 metaitem.chip.n_doped_silicon.name=n-Doped Silicon Chip
 metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
 
-metaitem.beads.ag_fifty_w_x_eight.name=AG 50W-X8 Resin Beads
+metaitem.beads.strong_acidic_cation_exchange.name=Strong Acidic Cation Exchange Resin Beads
 metaitem.beads.amberlyst_ch.name=Amberlyst CH-43 Beads
 metaitem.beads.rhenium_ion_exchange.name=Rhenium Ion Exchange Beads
-metaitem.beads.loaded_rhenium_ion_exchange.name=Loaded Rhenium Ion Exchange Beads
+metaitem.beads.weak_basic_cation_exchange.name=Weak Basic Cation Exchange Resin Beads
+metaitem.beads.strong_basic_cation_exchange.name=Strong Basic Cation Exchange Resin Beads
 
 metaitem.fused_quartz.name=Fused Quartz Plate
 metaitem.crucible.quartz.name=Quartz Crucible

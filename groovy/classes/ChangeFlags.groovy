@@ -165,7 +165,7 @@ class ChangeFlags {
         UraniumTriplatinum.addFlags("generate_fine_wire");
         RutheniumTriniumAmericiumNeutronate.addFlags("generate_fine_wire");
 
-        //Colors
+        // Colors
 
         Phosphorus.setMaterialRGB(0xfffed6);
 
@@ -181,9 +181,11 @@ class ChangeFlags {
         NetherAir.setFormula("(N78O21Ar9)24(CO2)2(H2S)(SO2)", true);
         Diatomite.setFormula("(SiO2)8(Fe2O3)(Al2O3)", true);
         Pollucite.setFormula("(Cs,Na)2Al2Si4O12(H2O)2", true);
+        Pitchblende.setFormula("(?)UO2", true);
 
         // Ore Processing
         
+        Pitchblende.addFlags("disable_decomposition")
         Borax.setProperty(PropertyKey.ORE, new OreProperty());
         Scheelite.addFlags("generate_sifted", "generate_flotated");
 		setupSlurries(Scheelite)
@@ -703,7 +705,7 @@ class ChangeFlags {
         oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
 
         oreProp = Carnotite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(GraniteTailings, GraniteTailings, GraniteTailings, GraniteTailings);
+        oreProp.setOreByProducts(LimestoneTailings, LimestoneTailings, LimestoneTailings, LimestoneTailings);
 
         oreProp = Cerussite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(Lead);
