@@ -327,68 +327,40 @@ VACUUM_CHAMBER = recipemap('vacuum_chamber')
             .duration(120)
             .buildAndRegister()
 
-//PLATINUM
+    //PLATINUM
 
-//Oxidation with Cl2
-//Reduction of Ir(IV) to Ir(III)
-//Precipitation with NH4Cl
-//Output: (NH4)2(PtCl6) precipitate
-//Output: Solution Pd,Rh,Ir
+        // Reduction of Ir(IV) to Ir(III) w/ Fe(II)
+        // Precipitation with NH4Cl
+        // Output: (NH4)2(PtCl6) precipitate
+        // Output: Solution Pd,Rh,Ir
 
-//solution + cl2 + h2c2o4*h2o -> solution with shit + co2
-//solution with shit + nh4cl*h2o -> (nh4)2[ptcl6] + platinum-free pgm solution
-//(NH4)2[PtCl6] + 2H2 --350*c-> Pt + 2NH4Cl + 4HCl
+        // Ir(IV) + Fe(II) -> Ir(III) + Fe(III)
+        // H2PtCl6 + 2NH4Cl -> (NH4)2PtCl6 + 2HCl     
 
-BR.recipeBuilder()
-    .fluidInputs(fluid('gold_free_pgm_solution') * 880)
-    .fluidInputs(fluid('oxalic_acid_solution') * 10)
-    .fluidOutputs(fluid('reduced_gold_free_pgm_solution') * 880)
-    .fluidOutputs(fluid('carbon_dioxide') * 20)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        MIXER.recipeBuilder()
+            .inputs(ore('dustIronIiChloride') * 3)
+            .fluidInputs(fluid('water') * 1000)
+            .fluidOutputs(fluid('iron_ii_chloride_solution') * 1000)
+            .duration(20)
+            .EUt(Globals.voltAmps[1])
+            .buildAndRegister()
 
-BR.recipeBuilder()
-    .fluidInputs(fluid('reduced_gold_free_pgm_solution') * 880)
-    .fluidInputs(fluid('ammonium_chloride_solution') * 1140)
-    .fluidOutputs(fluid('platinum_free_pgm_solution') * 310)
-    .chancedOutput(metaitem('dustAmmoniumHexachloroplatinate') * 17, 6064, 0) // The chance is 57 / 94
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        BR.recipeBuilder()
+            .fluidInputs(fluid('iron_ii_chloride_solution') * 30)
+            .fluidInputs(fluid('gold_free_pgm_solution') * 1130)
+            .fluidOutputs(fluid('reduced_gold_free_pgm_solution') * 1160)
+            .duration(20)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-//DNHS SYNTHESIS
-//C6H12 + H2S --UV-> C6H14S
-//C6H12 + HBr --UV, H2O2-> C6H13BRr
-//C6H14S + C6H13Br -> C12H26S + HBr
-
-BR.recipeBuilder()
-    .notConsumable(metaitem('carbon_arc_lamp'))
-    .fluidInputs(fluid('one_hexene') * 50)
-    .fluidInputs(fluid('hydrogen_sulfide') * 50)
-    .fluidOutputs(fluid('one_hexanethiol') * 50)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-BR.recipeBuilder()
-    .notConsumable(metaitem('carbon_arc_lamp'))
-    .fluidInputs(fluid('one_hexene') * 50)
-    .fluidInputs(fluid('hydrobromic_acid') * 50)
-    .fluidOutputs(fluid('one_bromohexane') * 50)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
-CSTR.recipeBuilder()
-    .fluidInputs(fluid('one_hexanethiol') * 50)
-    .fluidInputs(fluid('one_bromohexane') * 50)
-    .fluidOutputs(fluid('hydrobromic_acid') * 50)
-    .fluidOutputs(fluid('di_n_hexyl_sulfide') * 50)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
-
+        BR.recipeBuilder()
+            .fluidInputs(fluid('reduced_gold_free_pgm_solution') * 1160)
+            .fluidInputs(fluid('ammonium_chloride_solution') * 600)
+            .fluidOutputs(fluid('platinum_free_pgm_solution') * 1760)
+            .chancedOutput(metaitem('dustAmmoniumHexachloroplatinate') * 17, 3000, 0)
+            .duration(20)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
 //PALLADIUM
 

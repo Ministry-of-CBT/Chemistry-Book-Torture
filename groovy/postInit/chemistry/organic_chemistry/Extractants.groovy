@@ -692,9 +692,9 @@ SIEVE_DT = recipemap('sieve_distillation')
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-    //diisobutylene production
+    // Diisobutylene production
     // https://patents.google.com/patent/US7414164B2/en
-    // mostly from this patent: https://patents.google.com/patent/US5877372A/en
+    // Mostly from this patent: https://patents.google.com/patent/US5877372A/en
     BR.recipeBuilder()
         .notConsumable(metaitem('beads.strong_acidic_cation_exchange')) 
         //dry sulfonic acid ion exchange resin like Amberlyst 15 or zeolite-based catalysts
@@ -765,6 +765,38 @@ SIEVE_DT = recipemap('sieve_distillation')
         .fluidInputs(fluid('ortho_xylene') * 1000)
         .fluidOutputs(fluid('cobalt_extraction_mixture') * 1000)
         .duration(120)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    //DNHS SYNTHESIS
+    //C6H12 + H2S --UV-> C6H14S
+    //C6H12 + HBr --UV, H2O2-> C6H13BRr
+    //C6H14S + C6H13Br -> C12H26S + HBr
+
+    BR.recipeBuilder()
+        .notConsumable(metaitem('carbon_arc_lamp'))
+        .fluidInputs(fluid('one_hexene') * 50)
+        .fluidInputs(fluid('hydrogen_sulfide') * 50)
+        .fluidOutputs(fluid('one_hexanethiol') * 50)
+        .duration(20)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    BR.recipeBuilder()
+        .notConsumable(metaitem('carbon_arc_lamp'))
+        .fluidInputs(fluid('one_hexene') * 50)
+        .fluidInputs(fluid('hydrobromic_acid') * 50)
+        .fluidOutputs(fluid('one_bromohexane') * 50)
+        .duration(20)
+        .EUt(Globals.voltAmps[2])
+        .buildAndRegister()
+
+    CSTR.recipeBuilder()
+        .fluidInputs(fluid('one_hexanethiol') * 50)
+        .fluidInputs(fluid('one_bromohexane') * 50)
+        .fluidOutputs(fluid('hydrobromic_acid') * 50)
+        .fluidOutputs(fluid('di_n_hexyl_sulfide') * 50)
+        .duration(20)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 

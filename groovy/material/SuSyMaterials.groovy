@@ -1489,6 +1489,7 @@ class SuSyMaterials {
         public static Material HexachlororhodicAcidSolution;
         public static Material HexachlororuthenicAcidSolution;
         public static Material TetraamminepalladiumDichloride;
+        public static Material IronIIChlorideSolution;
 
 
         // Organic Chemistry Materials
