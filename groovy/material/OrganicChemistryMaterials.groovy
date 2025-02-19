@@ -249,11 +249,13 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        Diisobutylene = new Material.Builder(15038, SuSyUtility.susyId('diisobutylene'))
-                .fluid()
-                .components(Carbon * 8, Hydrogen * 16)
-                .color(0xa79781)
+        TrimethylBorate = new Material.Builder(15038, SuSyUtility.susyId('trimethyl_borate'))
+                .liquid()
+                .components(Boron, Carbon * 3, Oxygen * 3, Hydrogen * 9)
+                .colorAverage()
                 .build();
+
+        TrimethylBorate.setFormula("B(OCH3)3", true)
 
         MethylAcetateSolution = new Material.Builder(15039, SuSyUtility.susyId('methyl_acetate_solution'))
                 .liquid(new FluidBuilder().attribute(FluidAttributes.ACID))
@@ -2637,6 +2639,8 @@ public class OrganicChemistryMaterials {
         TrimethylpentylphosphinicAcid = new Material.Builder(15418, SuSyUtility.susyId('trimethylpentylphosphinic_acid'))
                 .fluid()
                 .components(Carbon * 16, Hydrogen * 35, Oxygen * 2, Phosphorus * 1)
+                .colorAverage()
+                .build();
 
         Diisobutylene = new Material.Builder(15419, SuSyUtility.susyId('diisobutylene'))
                 .fluid()

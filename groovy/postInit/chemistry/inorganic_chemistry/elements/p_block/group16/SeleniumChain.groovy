@@ -10,6 +10,7 @@ BCR = recipemap("bubble_column_reactor")
 HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
 REACTION_FURNACE = recipemap('reaction_furnace')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
+VACUUM_DT = recipemap('vacuum_distillation')
 
 // From copper electrorefining
 // Composition of slime: 15% Se, 5% Te, 40% Ag/Au, 40% Cu
@@ -70,13 +71,18 @@ BR.recipeBuilder()
 
 // From PGM Mattes
 
-BR.recipeBuilder()
+VACUUM_DT.recipeBuilder()
     .inputs(ore('dustMixedChalcogenDioxide') * 2)
-    .inputs(ore('dustSodiumHydroxide') * 9)
-    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
     .outputs(metaitem('dustTelluriumDioxide') * 3)
-    .fluidOutputs(fluid('sodium_selenite_solution') * 1000)
+    .fluidOutputs(fluid('selenium_dioxide') * 432)
     .duration(600)
+    .EUt(30)
+    .buildAndRegister()
+
+FLUID_SOLIDIFIER.recipeBuilder()
+    .fluidInputs(fluid('selenium_dioxide') * 432)
+    .outputs(metaitem('dustSeleniumDioxide') * 3)
+    .duration(20)
     .EUt(30)
     .buildAndRegister()
 

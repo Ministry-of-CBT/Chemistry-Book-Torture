@@ -2691,14 +2691,14 @@ public class FirstDegreeMaterials {
                 .build();
 
         SeleniumDioxide = new Material.Builder(8496, SuSyUtility.susyId("selenium_dioxide"))
-                .dust()
-                .components(Selenium * 1, Oxygen * 2)
+                .dust().gas(new FluidBuilder().temperature(623))
+                .components(Selenium, Oxygen * 2)
                 .colorAverage()
                 .build();
 
         CobaltSulfateSolution = new Material.Builder(8497, SuSyUtility.susyId("cobalt_sulfate_solution"))
                 .fluid()
-                .components(Cobalt * 1, Sulfur * 1, Oxygen * 4)
+                .components(Cobalt, Sulfur, Oxygen * 4)
                 .colorAverage()
                 .build();
 
@@ -2706,7 +2706,7 @@ public class FirstDegreeMaterials {
 
         NickelSulfate = new Material.Builder(8498, SuSyUtility.susyId('nickel_sulfate'))
                 .dust()
-                .components(Nickel * 1, Sulfur * 1, Oxygen * 4)
+                .components(Nickel, Sulfur, Oxygen * 4)
                 .color(0xcad3a7)
                 .build()
 
@@ -3624,11 +3624,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        SeleniumDioxide = new Material.Builder(8643, SuSyUtility.susyId("selenium_dioxide"))
-                .dust()
-                .components(Selenium * 1, Oxygen * 2)
-                .colorAverage()
-                .build();
+        // FREE ID: 8643
 
         DilutePotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('dilute_potassium_acetate_solution'))
                 .dust()
@@ -3638,9 +3634,7 @@ public class FirstDegreeMaterials {
 
         DilutePotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
 
-        // FREE IDs: 8645-8649
-
-        AmmoniumHexachlororhodate = new Material.Builder(8650, SuSyUtility.susyId('ammonium_hexachlororhodate'))
+        AmmoniumHexachlororhodate = new Material.Builder(8645, SuSyUtility.susyId('ammonium_hexachlororhodate'))
                 .dust()
                 .components(Nitrogen * 3, Hydrogen * 12, Rhodium * 1, Chlorine * 6)
                 .colorAverage()
@@ -3648,7 +3642,7 @@ public class FirstDegreeMaterials {
 
         AmmoniumHexachlororhodate.setFormula('(NH4)3(RhCl6)', true);
 
-        AmmoniumHexachloroiridate = new Material.Builder(8651, SuSyUtility.susyId('ammonium_hexachloroiridate'))
+        AmmoniumHexachloroiridate = new Material.Builder(8646, SuSyUtility.susyId('ammonium_hexachloroiridate'))
                 .dust()
                 .components(Nitrogen * 3, Hydrogen * 12, Iridium * 1, Chlorine * 6)
                 .colorAverage()
@@ -3656,7 +3650,7 @@ public class FirstDegreeMaterials {
         
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
 
-        PotassiumAcetateSolution = new Material.Builder(8652, SuSyUtility.susyId('potassium_acetate_solution'))
+        PotassiumAcetateSolution = new Material.Builder(8647, SuSyUtility.susyId('potassium_acetate_solution'))
                 .dust()
                 .components(Potassium, Carbon * 2, Hydrogen * 3, Oxygen * 2, Water * 2)
                 .colorAverage()
