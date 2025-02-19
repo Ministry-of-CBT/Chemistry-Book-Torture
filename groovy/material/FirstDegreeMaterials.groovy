@@ -3624,15 +3624,21 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        // FREE ID: 8643
+        AmmoniumHexachlororuthenate = new Material.Builder(8643, SuSyUtility.susyId('ammonium_hexachlororuthenate'))
+                .liquid(new FluidBuilder())
+                .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
+                .colorAverage()
+                .build();
 
-        DilutePotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('dilute_potassium_acetate_solution'))
+        AmmoniumHexachlororuthenateSolution.setFormula('(NH4)2[RuCl6]', true)
+
+        PotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('diluted_potassium_acetate_solution'))
                 .dust()
                 .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
                 .colorAverage()
                 .build();
 
-        DilutePotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
+        PotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
 
         AmmoniumHexachlororhodate = new Material.Builder(8645, SuSyUtility.susyId('ammonium_hexachlororhodate'))
                 .dust()
@@ -3649,14 +3655,5 @@ public class FirstDegreeMaterials {
                 .build();
         
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
-
-        PotassiumAcetateSolution = new Material.Builder(8647, SuSyUtility.susyId('potassium_acetate_solution'))
-                .dust()
-                .components(Potassium, Carbon * 2, Hydrogen * 3, Oxygen * 2, Water * 2)
-                .colorAverage()
-                .build();
-
-        PotassiumAcetateSolution.setFormula("(CH3COOK)(H2O)", true)
-
     }
 }

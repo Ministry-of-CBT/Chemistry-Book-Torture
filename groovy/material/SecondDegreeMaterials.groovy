@@ -797,13 +797,7 @@ public class SecondDegreeMaterials {
 
         HexachlororuthenicAcidSolution.setFormula('(H2RuCl6)2(H2O)35', true)
 
-        AmmoniumHexachlororuthenateSolution = new Material.Builder(13133, SuSyUtility.susyId('ammonium_hexachlororuthenate_solution'))
-                .liquid(new FluidBuilder())
-                .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
-                .colorAverage()
-                .build();
-
-        AmmoniumHexachlororuthenateSolution.setFormula('((NH4)2[RuCl6])2(H2O)35', true)
+        // FREE ID: 13133
 
         TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
                 .liquid()

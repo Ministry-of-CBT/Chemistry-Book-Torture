@@ -1286,6 +1286,8 @@ class SuSyMaterials {
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;
         public static Material CopperCarbonate;
+        public static Material DilutedPotassiumAcetateSolution;
+        public static Material AmmoniumHexachlororuthenate;
         public static Material AmmoniumHexachlororhodate;
         public static Material AmmoniumHexachloroiridate;
 
@@ -1486,7 +1488,6 @@ class SuSyMaterials {
         public static Material HexachloroiridicAcidSolution;
         public static Material HexachlororhodicAcidSolution;
         public static Material HexachlororuthenicAcidSolution;
-        public static Material AmmoniumHexachlororuthenateSolution;
         public static Material TetraamminepalladiumDichloride;
 
 
