@@ -2020,17 +2020,14 @@ public class UnknownCompositionMaterials {
                 .build();
       
 
-        AcidicNickelCopperSulfateSolution = new Material.Builder(4427, SuSyUtility.susyId("acidic_nickel_copper_sulfate_solution"))
-                .fluid()
-                .color(0x502d0a)
-                .build();
+        //FREE ID: 4427
 
         OxidizedPGMLeach = new Material.Builder(4428, SuSyUtility.susyId("oxidized_pgm_leach"))
                 .fluid()
                 .color(0x1b261d)
                 .build();
 
-        ImpureNickelSulfate = new Material.Builder(4429, SuSyUtility.susyId("impure_nickel_sulfate"))
+        ImpureNickelSulfateSolution = new Material.Builder(4429, SuSyUtility.susyId("impure_nickel_sulfate_solution"))
                 .fluid()
                 .color(0x1b4a1f)
                 .build();
@@ -2061,19 +2058,19 @@ public class UnknownCompositionMaterials {
                 .color(0xb3562b)
                 .build();
 
-        CopperSelenidePrecipitate = new Material.Builder(4435, SuSyUtility.susyId("copper_selenide_precipitate"))
+        CopperSelenideTelluride = new Material.Builder(4435, SuSyUtility.susyId("copper_selenide_telluride"))
                 .dust()
                 .color(0xafc474)
                 .build();
 
-        SeleniumFreeCopperLeach = new Material.Builder(4436, SuSyUtility.susyId("selenium_free_copper_leach"))
+        ChalcogenFreeCopperLeach = new Material.Builder(4436, SuSyUtility.susyId("chalcogen_free_copper_leach"))
                 .fluid()
                 .color(0xf57242)
                 .build();
 
-        SeleniumFreeCalcine = new Material.Builder(4437, SuSyUtility.susyId("selenium_free_calcine"))
+        MixedChalcogenDioxide = new Material.Builder(4437, SuSyUtility.susyId("mixed_chalcogen_dioxide"))
                 .dust()
-                .color(0xe60e0e)
+                .color(0x657d85)
                 .build();
 
         NickelCobaltSulfate = new Material.Builder(4438, SuSyUtility.susyId("nickel_cobalt_sulfate"))
@@ -2087,10 +2084,7 @@ public class UnknownCompositionMaterials {
                 .color(0x48852c)
                 .build();
 
-        IronSulfateMotherLiquor = new Material.Builder(4440, SuSyUtility.susyId("iron_sulfate_mother_liquor"))
-                .fluid()
-                .color(0x42f578)
-                .build();
+        //FREE ID: 4440-4441
 
         CobaltExtract = new Material.Builder(4442, SuSyUtility.susyId("cobalt_extract"))
                 .fluid()

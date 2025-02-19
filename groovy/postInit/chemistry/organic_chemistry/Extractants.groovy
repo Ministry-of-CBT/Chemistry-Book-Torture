@@ -32,6 +32,7 @@ ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
 PSA = recipemap('pressure_swing_adsorption')
 SINTERING_OVEN = recipemap('sintering_oven')
 EXTRACTOR = recipemap('extractor')
+SIEVE_DT = recipemap('sieve_distillation')
 
 //LIXIVANTS
 
@@ -705,13 +706,12 @@ EXTRACTOR = recipemap('extractor')
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-    DISTILLATION_TOWER.recipeBuilder() //90% yield converted to diisobutytlene?
+    SIEVE_DT.recipeBuilder() //90% yield converted to diisobutytlene?
+        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
         .fluidInputs(fluid('diisobutylene_mixture') * 1000)
         .fluidOutputs(fluid('isobutylene') * 90)
         .fluidOutputs(fluid('diisobutylene') * 400)
-        .fluidOutputs(fluid('triisobutylene') * 20)
-    //        ↓ this is not doable currently due to DT input restrictions
-    //        .notConsumable(fluid('tert_butyl_alcohol') * 50) //not all tBuOH and isobutent reacts in the dimerization process
+        //.fluidOutputs(fluid('triisobutylene') * 20)
         .duration(800)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -767,7 +767,6 @@ EXTRACTOR = recipemap('extractor')
         .duration(120)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
-
 
 //ION EXCHANGE RESINS
 

@@ -25,10 +25,11 @@ SIEVE_DT = recipemap('sieve_distillation')
 PHASE_SEPARATOR = recipemap('phase_separator')
 VACUUM_CHAMBER = recipemap('vacuum_chamber')
 
-//The pelletized material is smelted in a shaft furnace to form a 
-//copper – nickel matte. Oxygen is then blown into the converter
-//to oxidize the iron sulfide selectively to iron oxide, 
-//which forms a slag.
+// Smelting
+// The pelletized material is smelted in a shaft furnace to form a 
+// copper – nickel matte. Oxygen is then blown into the converter
+// to oxidize the iron sulfide selectively to iron oxide, 
+// which forms a slag.
 
 EBF.recipeBuilder()
         .circuitMeta(2)
@@ -39,12 +40,13 @@ EBF.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
+// GM: Ni: 33%, Cu: 18%, Co: 6%, Fe: 7%, S: 33%, S: 2%, Se/Te: 1%
 EBF.recipeBuilder()
         .inputs(ore('dustGreenMatte') * 6)
         .fluidInputs(fluid('oxygen') * 1400)
-        .chancedOutput(metaitem('white_matte') * 6, 8600, 0)
-        .chancedOutput(metaitem('dustGraniticMineralSand'), 1400, 0)
-        .fluidOutputs(fluid('sulfur_dioxide') * 420)
+        .chancedOutput(metaitem('white_matte') * 6, 8600, 0) // Remaining components
+        .chancedOutput(metaitem('dustGraniticMineralSand'), 1400, 0) // 0.07 * 6 Fe in, 0.42 Fe out as 0.14 Fe3O4
+        .fluidOutputs(fluid('sulfur_dioxide') * 420) // Assumed Fe present as pyrrhotite (~FeS)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
@@ -56,134 +58,117 @@ MACERATOR.recipeBuilder()
         .EUt(2)
         .buildAndRegister()
 
-//method described in https://patentimages.storage.googleapis.com/2b/70/5a/cbb5549831857c/US4571262.pdf
+// Atmospheric leach
+// Method described in https://patentimages.storage.googleapis.com/2b/70/5a/cbb5549831857c/US4571262.pdf
 
-//atmospheric leach
-
+// Oxidizes Ni, Co sulfides to oxide, sulfuric acid converts to sulfate.
 BR.recipeBuilder()
+        .circuitMeta(1)
         .inputs(ore('dustWhiteMatte') * 2)
-        .fluidInputs(fluid('air') * 11740)
-        .fluidInputs(fluid('sulfuric_acid') * 1350)
-        .fluidOutputs(fluid('oxidized_pgm_leach') * 1350)
-        .duration(50)
+        .fluidInputs(fluid('air') * 4220) 
+        .fluidInputs(fluid('sulfuric_acid') * 890)
+        .chancedOutput(metaitem('dustSulfur') * 1450, 0)
+        .fluidOutputs(fluid('oxidized_pgm_leach') * 890)
+        .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-BR.recipeBuilder()
-        .inputs(ore('dustWhiteMatte'))
-        .fluidInputs(fluid('air') * 11740)
-        .fluidInputs(fluid('acidic_nickel_copper_sulfate_solution') * 1000)
-        .fluidOutputs(fluid('oxidized_pgm_leach') * 1000)
-        .duration(50)
-        .EUt(Globals.voltAmps[2])
-        .buildAndRegister()
-
+// NiSO4: 37.50%, Cu: 20.45%, CoSO4: 6.82%, S: 31.82%, PGM: 2.27%, Se/Te: 1.14%, 2 moles solids/aqueous species carried w/ 890L H2O
 SIFTER.recipeBuilder()
-        .fluidInputs(fluid('oxidized_pgm_leach') * 1000)
+        .fluidInputs(fluid('oxidized_pgm_leach') * 890)
         .notConsumable(metaitem('item_filter'))
-        .fluidOutputs(fluid('impure_nickel_sulfate') * 1000)
-        .outputs(metaitem('dustCopperRichPgmSolids'))
+        .fluidOutputs(fluid('impure_nickel_sulfate_solution') * 890) // Carries 0.75 NiSO4, 0.136 CoSO4
+        .chancedOutput(metaitem('dustCopperRichPgmSolids') * 2, 5630, 0)
         .duration(50)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-//pressure leach
+// Pressure leach
+
+// Cu: 39.49%, S: 53.93%, PGM: 4.39%, Se/Te: 2.19%, Oxidizes Cu, S, Se/Te.
 AUTOCLAVE.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .fluidInputs(fluid('oxygen') * 1000)
         .inputs(ore('dustCopperRichPgmSolids'))
-        .fluidOutputs(fluid('pgm_copper_leach_slurry') * 1000)
-        .duration(200)
-        .EUt(Globals.voltAmps[2])
-        .buildAndRegister()
-
-AUTOCLAVE.recipeBuilder()
-        .fluidInputs(fluid('sulfuric_acid') * 1500)
-        .fluidInputs(fluid('oxygen') * 1500)
-        .inputs(ore('dustSeleniumFreeCalcine'))
-        .fluidOutputs(fluid('pgm_copper_leach_slurry') * 1500)
+        .fluidInputs(fluid('oxygen') * 540)
+        .fluidInputs(fluid('sulfuric_acid') * 400)
+        .chancedOutput(metaitem('dustSulfur'), 540, 0)
+        .fluidOutputs(fluid('pgm_copper_leach_slurry') * 400)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 SIFTER.recipeBuilder()
-        .fluidInputs(fluid('pgm_copper_leach_slurry') * 1000)
+        .fluidInputs(fluid('pgm_copper_leach_slurry') * 400)
         .notConsumable(metaitem('item_filter'))
-        .fluidOutputs(fluid('pgm_free_copper_leach') * 1000)
-        .outputs(metaitem('dustPgmConcentrate'))
+        .fluidOutputs(fluid('pgm_free_copper_leach') * 400) // Carries 0.40 CuSO4, 0.02 Se/TeO2 in 400L H2O
+        .chancedOutput(metaitem('dustPgmConcentrate'), 440, 0) // PGM Oxides, avg. oxidation state = 4.82
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-//selenium extraction
-CSTR.recipeBuilder()
-        .fluidInputs(fluid('pgm_free_copper_leach') * 50)
-        .fluidInputs(fluid('sulfur_dioxide') * 50)
-        .fluidOutputs(fluid('sulfidic_copper_leach') * 50)
+// Selenium extraction
+
+// 2 CuSO4 + 4 SO2 + 6 H2O + (Se,Te)O2 -> Cu2(Se,Te) + 6 H2SO4, 0.022 moles Se/TeO2 present
+BCR.recipeBuilder()
+        .fluidInputs(fluid('pgm_free_copper_leach') * 400)
+        .fluidInputs(fluid('sulfur_dioxide') * 90)
+        .fluidOutputs(fluid('sulfidic_copper_leach') * 285)
         .duration(50)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 SIFTER.recipeBuilder()
-        .fluidInputs(fluid('sulfidic_copper_leach') * 1000)
+        .fluidInputs(fluid('sulfidic_copper_leach') * 285)
         .notConsumable(metaitem('item_filter'))
-        .fluidOutputs(fluid('selenium_free_copper_leach') * 1000)
-        .outputs(metaitem('dustCopperSelenidePrecipitate'))
+        .fluidOutputs(fluid('chalcogen_free_copper_leach') * 285) // Carries 0.35 CuSO4, 0.136 H2SO4 in 285L of H2O
+        .chancedOutput(metaitem('dustCopperSelenideTelluride'), 220, 0)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister() 
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustCopperSelenidePrecipitate'))
-        .fluidInputs(fluid('air') * 2000)
-        .chancedOutput(metaitem('dustSeleniumDioxide'), 2000, 0)
-        .outputs(metaitem('dustSeleniumFreeCalcine'))
+        .inputs(ore('dustCopperSelenideTelluride'))
+        .fluidInputs(fluid('air') * 9530)
+        .outputs(metaitem('dustMixedChalcogenDioxide'))
+        .outputs(metaitem('dustCopper') * 2)
         .duration(300)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 ROASTER.recipeBuilder()
-        .inputs(ore('dustCopperSelenidePrecipitate'))
-        .fluidInputs(fluid('oxygen') * 419)
-        .chancedOutput(metaitem('dustSeleniumDioxide'), 2095, 0)
-        .outputs(metaitem('dustSeleniumFreeCalcine'))
+        .inputs(ore('dustCopperSelenideTelluride'))
+        .fluidInputs(fluid('oxygen') * 2000)
+        .outputs(metaitem('dustMixedChalcogenDioxide'))
+        .outputs(metaitem('dustCopper') * 2)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-//copper electrowinning
+// Copper electrowinning
+
 ELECTROLYTIC_CELL.recipeBuilder()
-        .fluidInputs(fluid('selenium_free_copper_leach') * 1000)
+        .fluidInputs(fluid('chalcogen_free_copper_leach') * 810)
         .inputs(ore('plateCopper'))
         .notConsumable(ore('plateStainlessSteel'))
-        .fluidInputs(fluid('sulfuric_acid') * 1000)
-        .fluidOutputs(fluid('acidic_nickel_copper_sulfate_solution') * 2000)
-        .outputs(metaitem('dustCopper') * 2)
+        .fluidInputs(fluid('water') * 185)
+        .fluidOutputs(fluid('sulfuric_acid') * 1375)
+        .outputs(metaitem('dustCopper'))
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()    
 
+// Nickel/cobalt separation
+// Input the impure nickel sulfate solution into a crystallizer
+// It should make a mixture of cobalt and nickel sulfate dusts and a mother liquor of iron ii sulfate solution
+// Then redissolve and extract with cyanex
+// Crystallisation step makes a nickel-cobalt solution and leaves behind an iron sulfate mother liquor
 
-//input the impure nickel sulfate solution into a crystallizer
-//it should make a mixture of cobalt and nickel sulfate dusts and a mother liquor of iron ii sulfate solution
-//then redissolve and extract with cyanex
-
-// crystallisation step makes a nickel-cobalt solution and leaves behind an iron sulfate mother liquor
 CRYSTALLIZER.recipeBuilder()
         .fluidInputs(fluid('dense_steam') * 1000)
-        .fluidInputs(fluid('impure_nickel_sulfate') * 1000)
-        .fluidOutputs(fluid('iron_sulfate_mother_liquor') * 1000)
+        .fluidInputs(fluid('impure_nickel_sulfate_solution') * 1000)
+        .fluidOutputs(fluid('wastewater') * 2000)
         .outputs(metaitem('dustNickelCobaltSulfate') * 6)
         .duration(400)
         .EUt(Globals.voltAmps[2])
-        .buildAndRegister()
-
-DISTILLERY.recipeBuilder()
-        .fluidInputs(fluid('iron_sulfate_mother_liquor') * 1000)
-        .fluidOutputs(fluid('water') * 1000)
-        .outputs(metaitem('dustIronSulfate') * 7)
-        .duration(80)
-        .EUt(Globals.voltAmps[1])
         .buildAndRegister()
 
 MIXER.recipeBuilder()
@@ -194,21 +179,23 @@ MIXER.recipeBuilder()
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
-// cyanex-272 extractant makes cobalt sulfate leaving behind nickel sulfate solution
+// Cyanex-272 extractant makes cobalt sulfate leaving behind nickel sulfate solution
+
 CENTRIFUGE.recipeBuilder()
         .fluidInputs(fluid('cobalt_extraction_mixture') * 1000) 
         .fluidInputs(fluid('nickel_cobalt_sulfate_solution') * 1000)
-        .fluidOutputs(fluid('cobalt_extract') * 1200) 
-        .fluidOutputs(fluid('nickel_sulfate_solution') * 800) 
+        .fluidOutputs(fluid('cobalt_extract') * 1000) 
+        .fluidOutputs(fluid('nickel_sulfate_solution') * 850)
+        .fluidOutputs(fluid('diluted_sulfuric_acid') * 300)
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()
 
 CENTRIFUGE.recipeBuilder()
-        .fluidInputs(fluid('cobalt_extract') * 1200)
-        .fluidInputs(fluid('diluted_sulfuric_acid') * 10)
+        .fluidInputs(fluid('cobalt_extract') * 1000)
+        .fluidInputs(fluid('diluted_sulfuric_acid') * 300)
         .fluidOutputs(fluid('cobalt_extraction_mixture') * 1000)
-        .fluidOutputs(fluid('cobalt_sulfate_solution') * 200) 
+        .fluidOutputs(fluid('cobalt_sulfate_solution') * 150) 
         .duration(200)
         .EUt(Globals.voltAmps[2])
         .buildAndRegister()

@@ -11,7 +11,9 @@ HT_DISTILLATION_TOWER = recipemap('high_temperature_distillation')
 REACTION_FURNACE = recipemap('reaction_furnace')
 FLUID_SOLIDIFIER = recipemap('fluid_solidifier')
 
+// From copper electrorefining
 // Composition of slime: 15% Se, 5% Te, 40% Ag/Au, 40% Cu
+
 AUTOCLAVE.recipeBuilder()
     .inputs(metaitem('anode_slime.copper'))
     .fluidInputs(fluid('sulfuric_acid') * 400)
@@ -63,6 +65,18 @@ BR.recipeBuilder()
     .outputs(metaitem('dustSelenium'))
     .fluidOutputs(fluid('acidic_wastewater') * 3000)
     .duration(6)
+    .EUt(30)
+    .buildAndRegister()
+
+// From PGM Mattes
+
+BR.recipeBuilder()
+    .inputs(ore('dustMixedChalcogenDioxide') * 2)
+    .inputs(ore('dustSodiumHydroxide') * 9)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+    .outputs(metaitem('dustTelluriumDioxide') * 3)
+    .fluidOutputs(fluid('sodium_selenite_solution') * 1000)
+    .duration(600)
     .EUt(30)
     .buildAndRegister()
 

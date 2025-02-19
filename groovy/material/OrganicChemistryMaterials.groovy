@@ -2668,11 +2668,11 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        Triisobutylene = new Material.Builder(15424, SuSyUtility.susyId('triisobutylene'))
+        /*Triisobutylene = new Material.Builder(15424, SuSyUtility.susyId('triisobutylene'))
                 .fluid()
                 .components(Carbon * 12, Hydrogen * 24)
                 .color(0xb9ac9a)
-                .build();
+                .build();*/
 
         CobaltExtractionMixture = new Material.Builder(15425, SuSyUtility.susyId("cobalt_extraction_mixture"))
                 .fluid()
