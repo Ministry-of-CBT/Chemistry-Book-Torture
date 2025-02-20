@@ -2151,7 +2151,7 @@ public class UnknownCompositionMaterials {
                 .color(0xccc9a9)
                 .build();
 
-        OrganicIridiumSolution = new Material.Builder(4455, SuSyUtility.susyId("organic_iridium_solution"))
+        IridiumExtract = new Material.Builder(4455, SuSyUtility.susyId("iridium_extract"))
                 .fluid()
                 .color(0x8e8e8e)
                 .build();

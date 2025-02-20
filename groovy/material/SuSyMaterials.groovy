@@ -572,7 +572,7 @@ class SuSyMaterials {
         public static Material OsmiumRutheniumTetroxideMixture;
         public static Material OsmiumRutheniumSolution;
         public static Material ChlorinatedRhodiumIridiumSolution;
-        public static Material OrganicIridiumSolution;
+        public static Material IridiumExtract;
         public static Material DeacidifiedLipid;
         public static Material GlycerolMethanolSolution;
         public static Material GlycerolEthanolSolution;
@@ -1488,7 +1488,7 @@ class SuSyMaterials {
         public static Material HexachloroiridicAcidSolution;
         public static Material HexachlororhodicAcidSolution;
         public static Material HexachlororuthenicAcidSolution;
-        public static Material TetraamminepalladiumDichloride;
+        public static Material TetraamminepalladiumDichlorideSolution;
         public static Material IronIIChlorideSolution;
 
 

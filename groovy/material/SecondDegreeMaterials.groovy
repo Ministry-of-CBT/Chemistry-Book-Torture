@@ -767,13 +767,13 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TetraamminepalladiumDichloride = new Material.Builder(13121, SuSyUtility.susyId("tetraamminepalladium_dichloride"))
+        TetraamminepalladiumDichlorideSolution = new Material.Builder(13121, SuSyUtility.susyId("tetraamminepalladium_dichloride_solution"))
                 .fluid()
-                .components(Chlorine * 2, Hydrogen * 12, Nitrogen * 4, Palladium * 1)
+                .components(Chlorine * 2, Hydrogen * 12, Nitrogen * 4, Palladium)
                 .colorAverage()
                 .build();
 
-        TetraamminepalladiumDichloride.setFormula("[Pd(NH3)4]Cl2", true)
+        TetraamminepalladiumDichlorideSolution.setFormula("[Pd(NH3)4]Cl2", true)
 
         // FREE ID: 13122-13129
 
@@ -803,13 +803,7 @@ public class SecondDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        TetraamminepalladiumDichloride = new Material.Builder(13134, SuSyUtility.susyId('tetraamminepalladium_dichloride'))
-                .liquid()
-                .components(Ammonia * 4, Palladium * 1, Chlorine * 2, Water * 1)
-                .colorAverage()
-                .build();
-        
-        TetraamminepalladiumDichloride.setFormula('Pd(NH3)4Cl2(H2O)', true)
+        // FREE ID: 13134
 
         PotassiumPersulfateSolution = new Material.Builder(13135, SuSyUtility.susyId('potassium_persulfate_solution'))
                 .fluid()

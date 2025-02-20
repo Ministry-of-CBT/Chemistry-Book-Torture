@@ -362,153 +362,148 @@ VACUUM_CHAMBER = recipemap('vacuum_chamber')
             .EUt(Globals.voltAmps[2])
             .buildAndRegister()
 
-//PALLADIUM
+    //PALLADIUM
 
-//Solvent extraction with DNHS
-//Stripping with NH3(aq)
-//Output: (Pd(NH3)4)Cl2 extract
-//Output: Solution Ir,Rh
+        //Solvent extraction with DNHS
+        //Stripping with NH3(aq)
+        //Output: (Pd(NH3)4)Cl2 extract
+        //Output: Solution Ir,Rh
 
-//Solution + di-n-hexyl-sulfide -> palladium extract + palladium-free pgm solution
-//Extractant + (NH3)(H2O) -> (Pd(NH3)4)Cl2)
-//(Pd(NH3)4)Cl2) + 2HCl -> (Pd(NH3)2)Cl2) + 2NH4Cl
-//3[(Pd(NH3)2)Cl2)] -(inert atmosphere)-> 3Pd + 4NH4Cl + 2HCl + N2
+        //Solution + di-n-hexyl-sulfide -> palladium extract + palladium-free pgm solution
+        //Extractant + (NH3)(H2O) -> (Pd(NH3)4)Cl2)
+        //(Pd(NH3)4)Cl2) + 2HCl -> (Pd(NH3)2)Cl2) + 2NH4Cl
+        //3[(Pd(NH3)2)Cl2)] -(inert atmosphere)-> 3Pd + 4NH4Cl + 2HCl + N2
 
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('platinum_free_pgm_solution') * 310)
-    .fluidInputs(fluid('di_n_hexyl_sulfide') * 250)
-    .fluidOutputs(fluid('palladium_extract') * 500)
-    .fluidOutputs(fluid('rh_ir_solution') * 60)
-    .duration(100)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        CENTRIFUGE.recipeBuilder()
+            .fluidInputs(fluid('platinum_free_pgm_solution') * 1760)
+            .fluidInputs(fluid('di_n_hexyl_sulfide') * 400)
+            .fluidOutputs(fluid('palladium_extract') * 400)
+            .fluidOutputs(fluid('rh_ir_solution') * 1760)
+            .duration(100)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-CENTRIFUGE.recipeBuilder()
-    .fluidInputs(fluid('palladium_extract') * 2000)
-    .fluidInputs(fluid('ammonia_solution') * 1000)
-    .fluidOutputs(fluid('di_n_hexyl_sulfide') * 1000)
-    .fluidOutputs(fluid('tetraamminepalladium_dichloride') * 1000)
-    .duration(100)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        CENTRIFUGE.recipeBuilder()
+            .fluidInputs(fluid('palladium_extract') * 1000)
+            .fluidInputs(fluid('ammonia_solution') * 1000)
+            .fluidOutputs(fluid('di_n_hexyl_sulfide') * 1000)
+            .fluidOutputs(fluid('tetraamminepalladium_dichloride_solution') * 1000)
+            .duration(100)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-// Pd(NH3)4Cl2(H2O) + 2HCl + H2O -> 2NH4Cl(H2O) + Pd(NH3)2Cl2
-BR.recipeBuilder()
-    .fluidInputs(fluid('tetraamminepalladium_dichloride') * 1000)
-    .fluidInputs(fluid('hydrogen_chloride') * 2000)
-    .fluidInputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('ammonium_chloride_solution') * 2000)
-    .outputs(metaitem('dustDiamminedichloropalladium') * 11)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        // Pd(NH3)4Cl2(H2O) + 2HCl + H2O -> 2NH4Cl(H2O) + Pd(NH3)2Cl2
 
-//IRIDIUM
+        BR.recipeBuilder()
+            .fluidInputs(fluid('tetraamminepalladium_dichloride_solution') * 1000)
+            .fluidInputs(fluid('hydrogen_chloride') * 2000)
+            .fluidInputs(fluid('water') * 1000)
+            .fluidOutputs(fluid('ammonium_chloride_solution') * 2000)
+            .outputs(metaitem('dustDiamminedichloropalladium') * 11)
+            .duration(20)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-//Oxidation with Cl2
-//Solvent extraction with TBP
-//Stripping with H2O
-//Output: H2(IrCl6) extract
-//Output: Solution Rh
+    //IRIDIUM
 
-// 2H3(IrCl6) + Cl2 + 2H2O + 2TBP -> 2H2(IrCl6)(TBP) + 2HCl(H2O) (Iridium solution)
-// 
+        //Oxidation with Cl2
+        //Solvent extraction with TBP
+        //Stripping with H2O
+        //Output: H2(IrCl6) extract
+        //Output: Solution Rh
 
-BCR.recipeBuilder()
-    .fluidInputs(fluid('chlorine') * 5)
-    .fluidInputs(fluid('rh_ir_solution') * 60)
-    .fluidOutputs(fluid('chlorinated_rh_ir_solution') * 60)
-    .duration(100)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        // H3IrCl6 + 0.5Cl2 -> H2IrCl6 + HCl
+        
+        BCR.recipeBuilder()
+            .fluidInputs(fluid('chlorine') * 10)
+            .fluidInputs(fluid('rh_ir_solution') * 1760)
+            .fluidOutputs(fluid('chlorinated_rh_ir_solution') * 1760)
+            .duration(100)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-MIXER.recipeBuilder()
-    .fluidInputs(fluid('tributyl_phosphate') * 10)
-    .fluidInputs(fluid('chlorinated_rh_ir_solution') * 60)
-    .fluidOutputs(fluid('rh_ir_extraction_mixture') * 70)
-    .duration(20)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        CENTRIFUGE.recipeBuilder()
+            .fluidInputs(fluid('tributyl_phosphate') * 10)
+            .fluidInputs(fluid('chlorinated_rh_ir_solution') * 1760)
+            .fluidOutputs(fluid('hexachlororhodic_acid_solution') * 1760)
+            .fluidOutputs(fluid('iridium_extract') * 10)
+            .duration(20)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-PHASE_SEPARATOR.recipeBuilder()
-    .fluidInputs(fluid('rh_ir_extraction_mixture') * 70)
-    .fluidOutputs(fluid('hexachlororhodic_acid_solution') * 50)
-    .fluidOutputs(fluid('organic_iridium_solution') * 20)
-    .duration(80)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        PHASE_SEPARATOR.recipeBuilder()
+            .fluidInputs(fluid('iridium_extract') * 1000)
+            .fluidInputs(fluid('hydrochloric_acid') * 1000)
+            .fluidOutputs(fluid('hexachloroirodic_acid_solution') * 2000)
+            .fluidOutputs(fluid('tributyl_phosphate') * 1000)
+            .duration(80)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-// H2(IrCl6)(TBP) + HCl(H2O)(H2O) -> 
-PHASE_SEPARATOR.recipeBuilder()
-    .fluidInputs(fluid('organic_iridium_solution') * 200)
-    .fluidInputs(fluid('dilute_hydrochloric_acid') * 200)
-    .fluidOutputs(fluid('hexachloroirodic_acid_solution') * 100)
-    .fluidOutputs(fluid('tributyl_phosphate') * 100)
-    .duration(80)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        //H2IrCl6 + 2NH4Cl -> (NH3)2(IrCl6) + 2HCl
 
-//H2(IrCl6)(TBP) + 2NH4Cl -> (NH3)2(IrCl6) + 2HCl
+        CRYSTALLIZER.recipeBuilder()
+            .fluidInputs(fluid('hexachloroiridic_acid_solution') * 2000)
+            .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
+            .outputs(metaitem('dustAmmoniumHexachloroiridate') * 21)
+            .fluidOutputs(fluid('hydrochloric_acid') * 3000)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('hexachloroiridic_acid_solution') * 1000)
-    .fluidInputs(fluid('ammonium_chloride_solution') * 2000)
-    .outputs(metaitem('dustAmmoniumHexachloroiridate') * 21)
-    .fluidOutputs(fluid('hydrochloric_acid') * 2000)
-    .duration(200)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        // (NH4)2(IrCl6) + 2H2 -> Ir + 2NH3 + 6HCl
 
-REACTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustAmmoniumHexachloroiridate') * 21)
-    .fluidInputs(fluid('hydrogen') * 4000)
-    .outputs(metaitem('sponge.iridium'))
-    .outputs(metaitem('dustAmmoniumChloride') * 24)
-    .fluidOutputs(fluid('hydrogen_chloride') * 2000)
-    .duration(240)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        REACTION_FURNACE.recipeBuilder()
+            .inputs(ore('dustAmmoniumHexachloroiridate') * 21)
+            .fluidInputs(fluid('hydrogen') * 4000)
+            .outputs(metaitem('sponge.iridium'))
+            .fluidOutputs(fluid('ammonia') * 2000)
+            .fluidOutputs(fluid('hydrogen_chloride') * 6000)
+            .duration(240)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-MACERATOR.recipeBuilder()
-    .inputs(metaitem('sponge.iridium'))
-    .outputs(metaitem('dustIridium'))
-    .duration(240)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        MACERATOR.recipeBuilder()
+            .inputs(metaitem('sponge.iridium'))
+            .outputs(metaitem('dustIridium'))
+            .duration(240)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-//RHODIUM
+    //RHODIUM
 
-//Crystallization
-//Output: (NH4)3(RhCl6) crystals
+        // Crystallization
+        // Output: (NH4)3(RhCl6) crystals
 
-CRYSTALLIZER.recipeBuilder()
-    .fluidInputs(fluid('hexachlororhodic_acid_solution') * 1000)
-    .inputs(ore('dustAmmoniumChloride') * 18)
-    .outputs(metaitem('dustAmmoniumHexachlororhodate') * 21)
-    .fluidOutputs(fluid('hydrochloric_acid') * 4000)
-    .duration(200)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        CRYSTALLIZER.recipeBuilder()
+            .fluidInputs(fluid('hexachlororhodic_acid_solution') * 8800)
+            .inputs(ore('dustAmmoniumChloride') * 9)
+            .chancedOutput(metaitem('dustAmmoniumHexachlororhodate') * 21, 5000, 0)
+            .fluidOutputs(fluid('acidic_wastewater') * 8800)
+            .duration(200)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-// H3IrCl6 + 3NH4Cl -> (NH4)3(IrCl6) + 3HCl + excess HCl solvent?
-REACTION_FURNACE.recipeBuilder()
-    .inputs(ore('dustAmmoniumHexachlororhodate') * 21)
-    .fluidInputs(fluid('hydrogen') * 3000)
-    .outputs(metaitem('sponge.rhodium'))
-    .outputs(metaitem('dustAmmoniumChloride') * 18)
-    .fluidOutputs(fluid('hydrogen_chloride') * 3000)
-    .duration(240)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        // (NH4)3RhCl6 + 1.5H2 -> (NH4)3(IrCl6) + 3NH3 + 6HCl
 
-MACERATOR.recipeBuilder()
-    .inputs(metaitem('sponge.rhodium'))
-    .outputs(metaitem('dustRhodium'))
-    .duration(240)
-    .EUt(Globals.voltAmps[2])
-    .buildAndRegister()
+        REACTION_FURNACE.recipeBuilder()
+            .inputs(ore('dustAmmoniumHexachlororhodate') * 21)
+            .fluidInputs(fluid('hydrogen') * 3000)
+            .outputs(metaitem('sponge.rhodium'))
+            .fluidOutputs(fluid('ammonia') * 3000)
+            .fluidOutputs(fluid('hydrogen_chloride') * 6000)
+            .duration(240)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
 
-// PGM PROCESSING Tier 3
+        MACERATOR.recipeBuilder()
+            .inputs(metaitem('sponge.rhodium'))
+            .outputs(metaitem('dustRhodium'))
+            .duration(240)
+            .EUt(Globals.voltAmps[2])
+            .buildAndRegister()
+
+// PGM PROCESSING Tier 3 (SHELVED)
 
 //Begin with HCl solution of Pt,Pd,Rh,Ir,Au,Ag,Ru
 
