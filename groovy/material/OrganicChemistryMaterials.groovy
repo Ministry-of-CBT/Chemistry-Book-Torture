@@ -2618,11 +2618,7 @@ public class OrganicChemistryMaterials {
                 .colorAverage()
                 .build();
 
-        IsopropylamineSolution = new Material.Builder(15415, SuSyUtility.susyId('isopropylamine_solution'))
-                .liquid()
-                .components(Isopropylamine, Water)
-                .colorAverage()
-                .build();
+        //FREE ID: 15415
 
         ImpureSodiumBorohydride = new Material.Builder(15416, SuSyUtility.susyId('impure_sodium_borohydride'))
                 .dust()

@@ -1286,7 +1286,7 @@ class SuSyMaterials {
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;
         public static Material CopperCarbonate;
-        public static Material DilutedPotassiumAcetateSolution;
+        public static Material PotassiumAcetateSolution;
         public static Material AmmoniumHexachlororuthenate;
         public static Material AmmoniumHexachlororhodate;
         public static Material AmmoniumHexachloroiridate;
@@ -1913,6 +1913,7 @@ class SuSyMaterials {
         public static Material OneHexanethiol;
         public static Material OneBromohexane;
         public static Material DiNHexylsulfide;
+        public static Material Isopropylamine;
 
         // Third Degree Materials
 
@@ -2019,6 +2020,7 @@ class SuSyMaterials {
         public static Material FormicAcidWaterAzeotrope;
         public static Material LithiumHydroxideMotherLiquor;
         public static Material LithiumHydroxideMonohydrate;
+        public static Material IsopropylamineSolution;
 
         // Thermodynamics Materials
 

@@ -3630,9 +3630,9 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        AmmoniumHexachlororuthenateSolution.setFormula('(NH4)2[RuCl6]', true)
+        AmmoniumHexachlororuthenate.setFormula('(NH4)2[RuCl6]', true)
 
-        PotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('diluted_potassium_acetate_solution'))
+        PotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('potassium_acetate_solution'))
                 .dust()
                 .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
                 .colorAverage()
