@@ -2160,11 +2160,11 @@ susy.material.os_ru_solution=Osmium-Ruthenium Solution
 susy.material.reduced_gold_free_pgm_solution=Reduced Gold-Free PGM Solution
 susy.material.hexachloroiridic_acid_solution=Hexachloroiridic(IV) Acid Solution
 susy.material.hexachlororhodic_acid_solution=Hexachlororhodic(III) Acid Solution
-susy.material.hexachlororuthenic_acid_solution=Hydrogen Hexachlororuthenate(IV) Solution
+susy.material.hexachlororuthenic_acid_solution=Hexachlororuthenic Acid Solution
 susy.material.ammonium_hexachlororuthenate=Ammonium Hexachlororuthenate(IV)
 susy.material.tetraamminepalladium_dichloride_solution=Tetraamminepalladium Dichloride Solution
 susy.material.potassium_persulfate_solution=Potassium Persulfate Solution
-susy.material.potassium_osmate_solution=Potassium Osmate Solution
+susy.material.potassium_osmate=Potassium Osmate
 susy.material.diisobutylene=Diisobutylene
 susy.material.sodium_hypophosphite_solution=Sodium Hypophosphite Solution
 susy.material.trimethylpentylphosphinic_acid=Trimethylpentylphosphinic Acid
@@ -2215,6 +2215,8 @@ susy.material.isomerized_paraffin=Isomerized Paraffin
 susy.material.acidic_hydrogen_vapor=Acidic Hydrogen Vapor
 susy.material.sodium_hydroxide_methanol_solution=Sodium Hydroxide-Methanol Solution
 susy.material.dehexanized_naphtha=Dehexanized Naphtha
+susy.material.sodium_hydrosulfide=Sodium Hydrosulfide
+susy.material.sodium_hydrosulfide_solution=Sodium Hydrosulfide Solution
 
 # Isotopes
 
@@ -2563,9 +2565,10 @@ metaitem.chip.silicon_dioxide.name=Silicon Dioxide Chip
 
 metaitem.beads.strong_acidic_cation_exchange.name=Strong Acidic Cation Exchange Resin Beads
 metaitem.beads.amberlyst_ch.name=Amberlyst CH-43 Beads
-metaitem.beads.rhenium_ion_exchange.name=Rhenium Ion Exchange Beads
-metaitem.beads.weak_basic_cation_exchange.name=Weak Basic Cation Exchange Resin Beads
-metaitem.beads.strong_basic_cation_exchange.name=Strong Basic Cation Exchange Resin Beads
+metaitem.beads.loaded_rhenium_anion_exchange.name=Rhenium Ion Exchange Beads
+metaitem.beads.loaded_uranium_anion_exchange.name=Uranium Ion Exchange Beads
+metaitem.beads.weak_basic_anion_exchange.name=Weak Basic Cation Exchange Resin Beads
+metaitem.beads.strong_basic_anion_exchange.name=Strong Basic Cation Exchange Resin Beads
 
 metaitem.fused_quartz.name=Fused Quartz Plate
 metaitem.crucible.quartz.name=Quartz Crucible
@@ -2573,6 +2576,7 @@ metaitem.crucible.graphite.name=Graphite Crucible
 
 metaitem.vti_rich_pig_iron.name=Vanadium/Titanium-Rich Pig Iron
 metaitem.vt_slag.name=Vanadium/Titanium-Rich Slag
+metaitem.white_matte.name=White Matte
 metaitem.sponge.titanium.name=Titanium Sponge
 metaitem.sponge.titanium.crude.name=Crude Titanium Sponge
 metaitem.sponge.platinum.name=Platinum Sponge
@@ -2586,7 +2590,6 @@ metaitem.sponge.osmium.name=Osmium Sponge
 metaitem.sponge.ruthenium.name=Ruthenium Sponge
 metaitem.sponge.iridium.name=Iridium Sponge
 metaitem.sponge.rhodium.name=Rhodium Sponge
-
 
 metaitem.drone.lv.name=Basic Drone
 
@@ -2620,7 +2623,6 @@ metaitem.voltage_regulator.hv.name=High Voltage Regulator
 metaitem.circuit.basic_integrated.name=Miniaturized Electronic Circuit
 metaitem.circuit.good_integrated.name=Advanced Electronic Circuit
 metaitem.circuit.advanced_integrated.name=High-Voltage Electronic Circuit
-
 
 metaitem.turbojet.small.name=Small Turbojet Engine
 metaitem.wing_panel.fiber_reinforced_epoxy.name=Glass Fiber Reinforced Epoxy (GFEP) Wing Panel

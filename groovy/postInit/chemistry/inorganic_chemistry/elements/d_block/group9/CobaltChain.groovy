@@ -54,6 +54,17 @@ ELECTROLYTIC_CELL.recipeBuilder()
         .duration(240)
         .buildAndRegister()
 
+ELECTROLYTIC_CELL.recipeBuilder()
+        .notConsumable(metaitem('stickCobalt'))
+        .notConsumable(metaitem('graphite_electrode'))
+        .fluidInputs(fluid('cobalt_sulfate_solution') * 1000)
+        .outputs(metaitem('dustCobalt'))
+        .fluidOutputs(fluid('sulfuric_acid') * 1000)
+        .fluidOutputs(fluid('oxygen') * 1000)
+        .EUt(Globals.voltAmps[2])
+        .duration(240)
+        .buildAndRegister()
+
 for (combustible in combustibles()) {
     EBF.recipeBuilder()
         .inputs(ore('dustCobaltOxide') * 2)

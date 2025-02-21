@@ -86,6 +86,14 @@ FLUID_SOLIDIFIER.recipeBuilder()
     .EUt(30)
     .buildAndRegister()
 
+BR.recipeBuilder()
+    .inputs(ore('dustSeleniumDioxide') * 3)
+    .fluidInputs(fluid('sodium_hydroxide_solution') * 2000)
+    .fluidOutputs(fluid('sodium_selenite_solution') * 2000)
+    .duration(100)
+    .EUt(30)
+    .buildAndRegister()
+
 // Further refining
 
 HT_DISTILLATION_TOWER.recipeBuilder()

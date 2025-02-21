@@ -1286,10 +1286,11 @@ class SuSyMaterials {
         public static Material LithiumNitrateSolution;
         public static Material ZincCarbonate;
         public static Material CopperCarbonate;
-        public static Material PotassiumAcetateSolution;
         public static Material AmmoniumHexachlororuthenate;
         public static Material AmmoniumHexachlororhodate;
         public static Material AmmoniumHexachloroiridate;
+        public static Material PotassiumOsmate;
+        public static Material SodiumHydrosulfide;
 
         // HP Materials
 
@@ -1484,13 +1485,12 @@ class SuSyMaterials {
         public static Material AcidicArgonHydrogenMixture;
         public static Material AmmoniacalArgonHydrogenMixture;
         public static Material PotassiumPersulfateSolution;
-        public static Material PotassiumOsmateSolution;
         public static Material HexachloroiridicAcidSolution;
         public static Material HexachlororhodicAcidSolution;
         public static Material HexachlororuthenicAcidSolution;
         public static Material TetraamminepalladiumDichlorideSolution;
         public static Material IronIIChlorideSolution;
-
+        public static Material SodiumHydrosulfideSolution;
 
         // Organic Chemistry Materials
 

@@ -34,7 +34,7 @@ MIXER.recipeBuilder()
 
 FF.recipeBuilder()
         .fluidInputs(fluid('impure_pentlandite_slurry') * 2000)
-        .notConsumable(fluid('sodium_isobutyl_xanthate') * 100)
+        .notConsumable(ore('dustSodiumIsobutylXanthate'))
         .notConsumable(fluid('copper_sulfate_solution') * 100)
         .notConsumable(fluid('cresol') * 100)
         .fluidOutputs(fluid('pentlandite_slurry') * 1000)

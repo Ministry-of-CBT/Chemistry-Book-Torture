@@ -464,13 +464,7 @@ public class SecondDegreeMaterials {
                 .color(0x340959)
                 .build()
 
-        PotassiumOsmateSolution = new Material.Builder(13074, SuSyUtility.susyId('potassium_osmate_solution'))
-                .fluid()
-                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
-                .color(0xbf21a0)
-                .build();
-
-        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
+        // FREE ID: 13074
 
         DilutedAmmoniumSulfateSolution = new Material.Builder(13075, SuSyUtility.susyId('diluted_ammonium_sulfate_solution'))
                 .liquid()
@@ -813,13 +807,11 @@ public class SecondDegreeMaterials {
 
         PotassiumPersulfateSolution.setFormula("(K2S2O8)(H2O)", true)
 
-        PotassiumOsmateSolution = new Material.Builder(13136, SuSyUtility.susyId('potassium_osmate_solution'))
+        SodiumHydrosulfideSolution = new Material.Builder(13136, SuSyUtility.susyId('sodium_hydrosulfide_solution'))
                 .fluid()
-                .components(Potassium * 2, Osmium * 1, Oxygen * 7, Hydrogen * 6)
-                .color(0xbf21a0)
+                .components(SodiumHydrosulfide * 1, Water * 2)
+                .colorAverage()
                 .build();
-
-        PotassiumOsmateSolution.setFormula("(K2[OsO2(OH)4])(H2O)", true)
 
         CobaltSulfateSolution = new Material.Builder(13137, SuSyUtility.susyId("cobalt_sulfate_solution"))
                 .fluid()

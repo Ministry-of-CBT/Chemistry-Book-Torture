@@ -2803,7 +2803,7 @@ public class FirstDegreeMaterials {
                 .colorAverage()
                 .build();
 
-        //FREE IDs: 8513-8516
+        //FREE IDs: 8514-8516
 
         MolybdenumTrisulfide = new Material.Builder(8517, SuSyUtility.susyId('molybdenum_trisulfide'))
                 .dust()
@@ -3625,20 +3625,20 @@ public class FirstDegreeMaterials {
                 .build();
 
         AmmoniumHexachlororuthenate = new Material.Builder(8643, SuSyUtility.susyId('ammonium_hexachlororuthenate'))
-                .liquid(new FluidBuilder())
+                .dust()
                 .components(Nitrogen * 2, Hydrogen * 8, Ruthenium * 1, Chlorine * 6, Water * 1)
                 .colorAverage()
                 .build();
 
         AmmoniumHexachlororuthenate.setFormula('(NH4)2[RuCl6]', true)
 
-        PotassiumAcetateSolution = new Material.Builder(8644, SuSyUtility.susyId('potassium_acetate_solution'))
+        PotassiumOsmate = new Material.Builder(8644, SuSyUtility.susyId('potassium_osmate'))
                 .dust()
-                .components(Potassium * 2, Carbon * 4, Hydrogen * 6, Oxygen * 4, Water * 5)
-                .colorAverage()
+                .components(Potassium * 2, Osmium, Oxygen * 6, Hydrogen * 4)
+                .color(0xbf21a0)
                 .build();
 
-        PotassiumAcetateSolution.setFormula("(CH3COOK)2(H2O)5", true)
+        PotassiumOsmate.setFormula("K2[OsO2(OH)4]", true)
 
         AmmoniumHexachlororhodate = new Material.Builder(8645, SuSyUtility.susyId('ammonium_hexachlororhodate'))
                 .dust()
@@ -3655,5 +3655,11 @@ public class FirstDegreeMaterials {
                 .build();
         
         AmmoniumHexachloroiridate.setFormula('(NH4)2(IrCl6)', true);
+
+        SodiumHydrosulfide = new Material.Builder(8647, SuSyUtility.susyId('sodium_hydrosulfide'))
+                .dust()
+                .components(Sodium, Sulfur, Hydrogen)
+                .colorAverage()
+                .build();
     }
 }
